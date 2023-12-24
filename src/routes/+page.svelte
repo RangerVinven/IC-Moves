@@ -48,4 +48,15 @@
 
         margin-bottom: 20px;
     }
+
+    @media only screen and (max-width: 600px) {
+        .Header {
+            font-size: 44px;
+            margin-bottom: 5%;
+        }
+
+        .Looking-For-Header {
+            margin-top: 4%;
+        }
+    }
 </style>

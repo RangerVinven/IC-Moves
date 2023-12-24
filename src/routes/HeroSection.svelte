@@ -25,6 +25,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
         
     }
 
@@ -64,4 +65,32 @@
 
         z-index: -1;
     }
+
+    @media only screen and (max-width: 600px) {
+        #Hero-Section {
+            height: 100vh;
+            width: 100%;
+        }
+
+        #Hero-Curve {
+            display: none;
+        }
+
+        #Hero-Image-Container {
+            height: 100vh;
+            width: 100vh;
+
+            position: absolute;
+            overflow: hidden;
+
+            z-index: -1;
+        }
+        #Hero-Image {
+            opacity: 25%;
+        }
+
+        #Hero-Text {
+            text-align: center;
+        }
+}
 </style>
