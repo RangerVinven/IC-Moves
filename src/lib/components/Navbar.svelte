@@ -152,12 +152,12 @@
         #Mobile-Navbar {
             flex-direction: column;
             gap: 50px;
-            
+
+            text-align: center;
         }
 
         #Mobile-Navbar a {
-            font-size: 40px;
-            
+            font-size: 40px;            
         }
 
     }
