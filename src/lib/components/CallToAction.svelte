@@ -1,4 +1,4 @@
-<a id="Call-To-Action-Anchor" href="#/">
+<a id="Call-To-Action-Anchor" href="/search">
     <button id="Call-To-Action-Button">Find Your New Home!</button>
 </a>
 
