@@ -85,7 +85,7 @@
         text-align: center;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1000px) {
 
         #HomeBody {
             padding-left: 5%;
