@@ -10,7 +10,7 @@
 <div id="Mobile-Nav-Background" class:Animate-Mobile-Navbar-Appear={navbarPressed} class:Animate-Mobile-Navbar-Disappear={!navbarPressed}>
     <ul id="Mobile-Navbar">
         <li><a id={page === "Home" ? "active" : ""} href="/#">Home</a></li>
-        <li><a id={page === "Search" ? "active" : ""} href="/#">Search Properties</a></li>
+        <li><a id={page === "Search" ? "active" : ""} href="/search">Search Properties</a></li>
         <li><a id={page === "Login" ? "active" : ""} href="/#">Login</a></li>
         <li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
     </ul>
@@ -22,7 +22,7 @@
     </div>
     <ul id="Desktop-Tablet-Navbar">
         <li><a id={page === "Home" ? "active" : ""} href="/#">Home</a></li>
-        <li><a id={page === "Search" ? "active" : ""} href="/#">Search Properties</a></li>
+        <li><a id={page === "Search" ? "active" : ""} href="/search">Search Properties</a></li>
         <li><a id={page === "Login" ? "active" : ""} href="/#">Login</a></li>
         <li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
     </ul>
