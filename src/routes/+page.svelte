@@ -12,7 +12,9 @@
 </header>
     
 <main>
-    <HeroSection />
+    <div id="Hero-Section-Container">
+        <HeroSection />
+    </div>
 
     <h1 class="Header Looking-For-Header">Whether You're Looking For:</h1>
     <HomeBody />
@@ -24,6 +26,12 @@
 </main>
 
 <style>
+
+    #Hero-Section-Container {
+        height: 100dvh;
+        position: relative;
+        overflow: hidden;
+    }
 
     .Header {
         text-align: center;
