@@ -3,6 +3,7 @@
     
     export let page: string;
     
+    let navbarHasBeenPressed = false;
     let navbarPressed = false;
 </script>
 
@@ -26,10 +27,13 @@
         <li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
     </ul>
 
-    <button id="Hamburger-Icon" on:click={() => navbarPressed = !navbarPressed}>
-        <div class="Bar Bar-1" class:Bar-1-Navbar-Active={navbarPressed} />
-        <div class="Bar Bar-2" class:Bar-2-Navbar-Active={navbarPressed} />
-        <div class="Bar Bar-3" class:Bar-3-Navbar-Active={navbarPressed} />
+    <button id="Hamburger-Icon" on:click={() => {
+        navbarPressed = !navbarPressed;
+        navbarHasBeenPressed = true;
+        }}>
+        <div class="Bar Bar-1" class:Bar-1-Navbar-Active={navbarPressed} class:Bar-Deactivate-Navbar={!navbarPressed && navbarHasBeenPressed} />
+        <div class="Bar Bar-2" class:Bar-2-Navbar-Active={navbarPressed} class:Bar-Deactivate-Navbar={!navbarPressed && navbarHasBeenPressed} />
+        <div class="Bar Bar-3" class:Bar-3-Navbar-Active={navbarPressed} class:Bar-Deactivate-Navbar={!navbarPressed && navbarHasBeenPressed} />
     </button>
 </nav>
 
@@ -124,17 +128,25 @@
             margin-bottom: 5px;
         }
 
+        .Bar-Deactivate-Navbar {
+            transition-duration: 0.5s;
+        }
+
         
         .Bar-2-Navbar-Active {
             visibility: hidden;
+            opacity: 0;
+            transition: all 0.15s ease-in;
         }
 
         .Bar-1-Navbar-Active {
             transform: translate(0, 10px) rotate(45deg);
+            transition-duration: 0.5s;
         }
 
         .Bar-3-Navbar-Active {
             transform: translate(0, -10px) rotate(-45deg);
+            transition-duration: 0.5s;
         }
 
         #Mobile-Navbar {
