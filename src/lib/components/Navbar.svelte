@@ -2,22 +2,35 @@
     import Logo from "./Logo.svelte";
     
     export let page: string;
+    
+    let navbarPressed = false;
 </script>
 
+<div id="Mobile-Nav-Background">
+    <ul id="Mobile-Navbar">
+        <li><a id={page === "Home" ? "active" : ""} href="/#">Home</a></li>
+        <li><a id={page === "Search" ? "active" : ""} href="/#">Search Properties</a></li>
+        <li><a id={page === "Login" ? "active" : ""} href="/#">Login</a></li>
+        <li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
+    </ul>
+</div>
+
 <nav>
-    <Logo />
-    <ul>
+    <div id="Logo-Container">
+        <Logo />
+    </div>
+    <ul id="Desktop-Tablet-Navbar">
         <li><a id={page === "Home" ? "active" : ""} href="/#">Home</a></li>
         <li><a id={page === "Search" ? "active" : ""} href="/#">Search Properties</a></li>
         <li><a id={page === "Login" ? "active" : ""} href="/#">Login</a></li>
         <li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
     </ul>
 
-    <div id="Hamburger-Icon">
-        <div class="Bar Bar-1" />
-        <div class="Bar Bar-2" />
-        <div class="Bar Bar-3" />
-    </div>
+    <button id="Hamburger-Icon" on:click={() => navbarPressed = !navbarPressed}>
+        <div class="Bar Bar-1" class:Bar-1-Navbar-Active={navbarPressed} />
+        <div class="Bar Bar-2" class:Bar-2-Navbar-Active={navbarPressed} />
+        <div class="Bar Bar-3" class:Bar-3-Navbar-Active={navbarPressed} />
+    </button>
 </nav>
 
 <style>
@@ -37,6 +50,7 @@
         align-items: center;
         justify-content: right;
     }
+
 
     li {
         padding-right: 35px;
@@ -59,27 +73,79 @@
         color: var(--dark_brown);
     }
 
+    #Mobile-Nav-Background {
+        display: none;
+    }
+
     @media only screen and (max-width: 600px) {
+
+        #Logo-Container {
+            z-index: 2;
+        }
         nav {
-            position: absolute;
             align-items: center;
+            position: absolute;
         }
 
-        ul {
+        #Desktop-Tablet-Navbar {
             display: none;
         }
 
         #Hamburger-Icon {
             margin-right: 7%;
             cursor: pointer;
+
+            border: none;
+            background-color: white;
+
+            z-index: 2;
+        }
+
+        #Mobile-Nav-Background {
+            position: absolute;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            height: 100dvh;
+            width: 100%;
+
+            z-index: 1;
+
+            background-color: white;
         }
 
         .Bar {
-            width: 30px;
+            width: 50px;
             height: 5px;
             background-color: black;
 
             margin-bottom: 5px;
+        }
+
+        
+        .Bar-2-Navbar-Active {
+            visibility: hidden;
+        }
+
+        .Bar-1-Navbar-Active {
+            transform: translate(0, 10px) rotate(45deg);
+        }
+
+        .Bar-3-Navbar-Active {
+            transform: translate(0, -10px) rotate(-45deg);
+        }
+
+        #Mobile-Navbar {
+            flex-direction: column;
+            gap: 50px;
+            
+        }
+
+        #Mobile-Navbar a {
+            font-size: 40px;
+            
         }
 
     }
