@@ -20,19 +20,27 @@
             <button>Apply Filters</button>
         </div>
 
-        <div id="Properties">
-            <PropertyPreview />
-            <PropertyPreview />
-            <PropertyPreview />
-            <PropertyPreview />
-            <PropertyPreview />
-            <PropertyPreview />
-            <PropertyPreview />
+        <div id="Properties-And-Search">
+            <div id="Search-And-Button">
+                <input id="Search" placeholder="Enter a specific property" type="text">
+                <button>Search</button>
+            </div>
+            <div id="Properties">
+                <PropertyPreview />
+                <PropertyPreview />
+                <PropertyPreview />
+                <PropertyPreview />
+                <PropertyPreview />
+                <PropertyPreview />
+                <PropertyPreview />
+            </div>
         </div>
+       
     </div>
 </main>
 
 <style>
+
     #Properties-And-Filters {
         margin-top: 15px;
         margin-left: 10px;
@@ -84,12 +92,34 @@
         gap: 10px;
     }
 
-    #Properties {
+    #Properties-And-Search {
         width: 80%;
+    }
+
+    #Properties {
         height: 100dvh;
 
         display: flex;
         flex-wrap: wrap;
         gap: 5%;
+    }
+
+    #Search-And-Button {
+        margin-bottom: 10px;
+    }
+
+    #Search-And-Button > input {
+        border-radius: 4px;
+        border-color: #D9D9D9;
+        border-style: solid;
+
+        padding: 10px;
+        padding-right: 11%;
+
+        font-size: 17px;
+    }
+
+    #Search-And-Button > button {
+        margin-left: 15px;
     }
 </style>
