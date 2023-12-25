@@ -7,7 +7,7 @@
     let navbarPressed = false;
 </script>
 
-<div id="Mobile-Nav-Background">
+<div id="Mobile-Nav-Background" class:Animate-Mobile-Navbar-Appear={navbarPressed} class:Animate-Mobile-Navbar-Disappear={!navbarPressed}>
     <ul id="Mobile-Navbar">
         <li><a id={page === "Home" ? "active" : ""} href="/#">Home</a></li>
         <li><a id={page === "Search" ? "active" : ""} href="/#">Search Properties</a></li>
@@ -83,6 +83,15 @@
 
     @media only screen and (max-width: 600px) {
 
+        .Animate-Mobile-Navbar-Appear {
+            transform: translateY(100dvh);
+            transition-duration: 0.5s;
+        }
+
+        .Animate-Mobile-Navbar-Disappear {
+            transition-duration: 0.5s;
+        }
+
         #Logo-Container {
             z-index: 2;
         }
@@ -100,7 +109,7 @@
             cursor: pointer;
 
             border: none;
-            background-color: white;
+            background-color: transparent;
 
             z-index: 2;
         }
@@ -108,6 +117,8 @@
         #Mobile-Nav-Background {
             position: absolute;
             display: flex;
+
+            top: -100dvh;
 
             justify-content: center;
             align-items: center;
