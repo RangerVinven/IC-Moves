@@ -86,6 +86,12 @@
     }
 
     @media only screen and (max-width: 600px) {
+
+        #HomeBody {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
         .Looking-For-Option {
             flex-direction: column;
             margin-top: 5%;
