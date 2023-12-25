@@ -86,6 +86,10 @@
         background-color: transparent;
     }
 
+    #Desktop-Tablet-Navbar {
+        text-align: center;
+    }
+
     @media only screen and (max-width: 600px) {
 
         .Animate-Mobile-Navbar-Appear {

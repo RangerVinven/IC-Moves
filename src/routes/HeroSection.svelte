@@ -29,6 +29,10 @@
         
     }
 
+    #Hero-Text {
+        margin-left: 2%;
+    }
+
     #Hero-Text h1 {
         font-weight: normal;
         font-size: 50px;
