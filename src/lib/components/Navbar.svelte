@@ -136,8 +136,10 @@
         .Bar {
             width: 50px;
             height: 5px;
-            background-color: black;
 
+            border-radius: 10px;
+
+            background-color: black;
             margin-bottom: 5px;
         }
 
@@ -154,11 +156,13 @@
 
         .Bar-1-Navbar-Active {
             transform: translate(0, 10px) rotate(45deg);
+            transform-origin: center;
             transition-duration: 0.5s;
         }
 
         .Bar-3-Navbar-Active {
             transform: translate(0, -10px) rotate(-45deg);
+            transform-origin: center;
             transition-duration: 0.5s;
         }
 
