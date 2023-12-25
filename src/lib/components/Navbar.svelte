@@ -81,6 +81,11 @@
         display: none;
     }
 
+    #Hamburger-Icon {
+        border: none;
+        background-color: transparent;
+    }
+
     @media only screen and (max-width: 600px) {
 
         .Animate-Mobile-Navbar-Appear {
@@ -107,9 +112,6 @@
         #Hamburger-Icon {
             margin-right: 7%;
             cursor: pointer;
-
-            border: none;
-            background-color: transparent;
 
             z-index: 2;
         }
