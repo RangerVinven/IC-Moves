@@ -49,7 +49,6 @@
     #Property-Preview {
         cursor: pointer;
         width: 30%;
-        min-height: 50%;
         background-color: var(--light_brown);
 
         border-radius: 2px;
@@ -130,6 +129,7 @@
         
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     #Price-And-CallToAction > button {
@@ -141,9 +141,11 @@
 
         color: white;
 
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: normal;
 
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 15px;
         padding-right: 15px;
 
