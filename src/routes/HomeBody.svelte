@@ -1,23 +1,21 @@
 
-<div>
-    <div id="HomeBody">
-        <div id="Copy-Container">
-            <div class="Looking-For-Option">
-                <img src="assets/Home_Page/Father_Child_Ornament.jpg" alt="A father showing their child a christmas tree ornament" />
-                <h3>A new home to raise your family</h3>
-            </div>
+<div id="HomeBody">
+    <div id="Copy-Container">
+        <div class="Looking-For-Option">
+            <img src="assets/Home_Page/Father_Child_Ornament.jpg" alt="A father showing their child a christmas tree ornament" />
+            <h3>A new home to raise your family</h3>
+        </div>
 
-            <div id="Middle-Copy" class="Looking-For-Option">
-                <h3>Your first flat so you can spread your wings</h3>
-                <img src="assets/Home_Page/Woman_Painting.jpg" alt="A woman painting at a desk" />
-            </div>
+        <div id="Middle-Copy" class="Looking-For-Option">
+            <h3>Your first flat so you can spread your wings</h3>
+            <img src="assets/Home_Page/Woman_Painting.jpg" alt="A woman painting at a desk" />
+        </div>
 
-            <h3 id="Or-Even">Or even...</h3>
-            
-            <div id="Last-Image" class="Looking-For-Option">
-                <img src="assets/Home_Page/Elderly_Couple.jpg" alt="An elderly couple on a couch drinking wine" />
-                <h3>A new place to enjoy your retirement</h3>
-            </div>
+        <h3 id="Or-Even">Or even...</h3>
+        
+        <div id="Last-Image" class="Looking-For-Option">
+            <img src="assets/Home_Page/Elderly_Couple.jpg" alt="An elderly couple on a couch drinking wine" />
+            <h3>A new place to enjoy your retirement</h3>
         </div>
     </div>
 </div>
