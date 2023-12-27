@@ -31,7 +31,9 @@
             <FilterOptions />
         {/if}
 
-        <ApplyFiltersButton />
+        <div id="Apply-Filters-Button-Container">
+            <ApplyFiltersButton />
+        </div>
     </div>
 </div>
 
@@ -51,6 +53,12 @@
     #Filter-Arrow-Container {
         background-color: transparent;
         border: none;
+    }
+
+    #Apply-Filters-Button-Container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     @media only screen and (max-width: 900px) {
