@@ -144,7 +144,7 @@
         font-size: 20px;
         font-weight: normal;
 
-        padding: 10px 15px 10px 15px;
+        padding: 2% 7% 2% 7%;
 
         cursor: pointer;
     }
