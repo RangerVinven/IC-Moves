@@ -17,7 +17,7 @@
 
     a {
         text-decoration: none;
-        color: black
+        color: black;   
     }
 
     a:hover {
@@ -28,5 +28,12 @@
         font-weight: bold;
         color: var(--dark_brown);
     }
+
+    @media only screen and (max-width: 600px) {
+        a {
+            font-size: 40px;
+        }
+    }
+
 </style>
 
