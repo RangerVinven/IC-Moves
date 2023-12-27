@@ -7,18 +7,18 @@
     import FilterOptions from './FilterOptions.svelte';
     import ApplyFiltersButton from './ApplyFiltersButton.svelte';
 
-    $: filtersDisplayed = false;
+    $: isFilterDisplayed = false;
 </script>
 
 <div id="Mobile-Filters">
     <div id="Filters-Container-Mobile">
         <button on:click={() => {
-            filtersDisplayed = !filtersDisplayed
+            isFilterDisplayed = !isFilterDisplayed
             }}  id="Filters-And-Arrow-Container">
             <h3>Filters</h3>
             
             <div id="Filter-Arrow-Container">
-                {#if !filtersDisplayed}
+                {#if !isFilterDisplayed}
                     <FaArrowRight />
                 {:else}
                     <FaArrowDown />
@@ -27,7 +27,7 @@
 
         </button>
 
-        {#if filtersDisplayed}
+        {#if isFilterDisplayed}
             <FilterOptions />
         {/if}
 
@@ -38,17 +38,12 @@
 </div>
 
 <style>
-    #Mobile-Filters {
-        display: none;
-    }
-
     button {
         background-color: transparent;
         border: none;
 
         cursor: pointer;
     }
-
 
     #Filter-Arrow-Container {
         background-color: transparent;
@@ -62,10 +57,6 @@
     }
 
     @media only screen and (max-width: 900px) {
-        #Mobile-Filters {
-            display: block;
-            margin-bottom: 30px;
-        }
 
         #Filter-Arrow-Container {
             height: 30px;
@@ -89,4 +80,3 @@
         }
     }
 </style>
-
