@@ -6,7 +6,7 @@
 </script>
 
 <header>
-    <div style="margin-top: 0;">
+    <div style="margin-top: 0;position: absolute;width: 100%;">
         <Navbar page="Home" />
     </div>
 </header>
