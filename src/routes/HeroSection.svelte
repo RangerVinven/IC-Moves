@@ -14,7 +14,7 @@
         <img id="Hero-Image" src="assets/Home_Page/Hero_Image_Rounded.png" alt="Two parents hugging their child">
     </div>
     
-    <img id="Hero-Curve" src="assets/Home_Page/Hero_Curve.png">
+    <img id="Hero-Curve" src="assets/Home_Page/Hero_Curve.png" alt="Brown curve">
 
 </div>
 
@@ -25,8 +25,6 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
-        
     }
 
     #Hero-Text {
