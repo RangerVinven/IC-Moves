@@ -18,16 +18,15 @@
     }
 
     button {
-        background-color: var(--light_brown);
-        border: none;
-
         color: white;
+        background-color: var(--light_brown);
+
+        border: none;
+        cursor: pointer;
+
         font-size: 25px;
 
         padding: 10px;
-
-        cursor: pointer;
-
         border-radius: 5px;
     }
 
