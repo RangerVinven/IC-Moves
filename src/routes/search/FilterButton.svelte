@@ -1,28 +1,33 @@
-<button><h3><slot /></h3></button>
+<script lang="ts">
+    export let text: string;
+</script>
+
+<button>{text}</button>
 
 <style>
     button {
         cursor: pointer;
 
         width: 100%;
-        
-        padding-right: 15px;
-        padding-left: 15px;
 
         background-color: var(--light_brown);
         border: none;
         border-radius: 5px;
-    }
 
-    h3 {
         color: white;
         font-size: 20px;
 
-        margin: 5%;
         white-space: nowrap;
     }
 
     button:hover {
         background-color: var(--dark_brown);
+    }
+
+    @media only screen and (max-width: 900px) {
+        button {
+            padding: 30px;
+        }
+
     }
 </style>
