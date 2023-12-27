@@ -83,6 +83,7 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
     @media only screen and (max-width: 900px) {
         #Mobile-Filter-Container {
             display: block;
+            margin-bottom: 30px;
         }
 
         #Filters {
