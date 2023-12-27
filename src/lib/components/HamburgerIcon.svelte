@@ -23,13 +23,6 @@
 </button>
 
 <style>
-    nav { 
-        z-index: 1;
-
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
 
     ul {
         list-style: none;
@@ -49,10 +42,6 @@
         background-color: transparent;
     }
 
-    #Desktop-Tablet-Navbar {
-        text-align: center;
-    }
-
     @media only screen and (max-width: 600px) {
 
         .Animate-Mobile-Navbar-Appear {
@@ -62,17 +51,6 @@
 
         .Animate-Mobile-Navbar-Disappear {
             transition-duration: 0.5s;
-        }
-
-        #Logo-Container {
-            z-index: 2;
-        }
-        nav {
-            align-items: center;
-        }
-
-        #Desktop-Tablet-Navbar {
-            display: none;
         }
 
         #Hamburger-Icon {
