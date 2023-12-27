@@ -5,13 +5,13 @@
     import FaArrowDown from 'svelte-icons/fa/FaArrowDown.svelte';
 
     import FilterOptions from './FilterOptions.svelte';
+    import ApplyFiltersButton from './ApplyFiltersButton.svelte';
 
     $: filtersDisplayed = false;
 </script>
 
 <div id="Mobile-Filters">
     <div id="Filters-Container-Mobile">
-
         <button on:click={() => {
             filtersDisplayed = !filtersDisplayed
             }}  id="Filters-And-Arrow-Container">
@@ -30,6 +30,8 @@
         {#if filtersDisplayed}
             <FilterOptions />
         {/if}
+
+        <ApplyFiltersButton />
     </div>
 </div>
 
