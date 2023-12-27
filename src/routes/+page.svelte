@@ -17,7 +17,9 @@
     </div>
 
     <h1 class="Header Looking-For-Header">Whether You're Looking For:</h1>
-    <HomeBody />
+    <div id="Home-Body-Container">
+        <HomeBody />
+    </div>
     <h1 class="Header Something-For-You-Header">We have something for you.</h1>
 
     <div id="Call-To-Action-Div">
@@ -26,11 +28,17 @@
 </main>
 
 <style>
-
     #Hero-Section-Container {
         height: 100dvh;
         position: relative;
         overflow: hidden;
+    }
+
+    #Home-Body-Container {
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
     }
 
     .Header {
