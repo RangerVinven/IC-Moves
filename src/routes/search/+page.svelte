@@ -29,13 +29,9 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
             </div>
 
             <div id="Properties">
-                <PropertyPreview />
-                <PropertyPreview />
-                <PropertyPreview />
-                <PropertyPreview />
-                <PropertyPreview />
-                <PropertyPreview />
-                <PropertyPreview />
+                {#each {length: 7} as _, i}
+                    <PropertyPreview />
+                {/each}
             </div>
         </div>
        
