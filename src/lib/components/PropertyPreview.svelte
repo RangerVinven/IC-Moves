@@ -48,7 +48,7 @@
 <style>
     #Property-Preview {
         cursor: pointer;
-        width: 30%;
+        width: 25%;
         background-color: var(--light_brown);
 
         border-radius: 2px;
@@ -66,7 +66,7 @@
     #Preview-Image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
     }
 
     #Info-Container {
