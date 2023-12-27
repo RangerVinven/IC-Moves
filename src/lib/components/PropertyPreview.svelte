@@ -48,7 +48,7 @@
 <style>
     #Property-Preview {
         cursor: pointer;
-        width: 25%;
+        width: 400px;
         background-color: var(--light_brown);
 
         border-radius: 2px;
