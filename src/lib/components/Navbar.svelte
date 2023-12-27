@@ -106,7 +106,6 @@
         }
         nav {
             align-items: center;
-            position: absolute;
         }
 
         #Desktop-Tablet-Navbar {
