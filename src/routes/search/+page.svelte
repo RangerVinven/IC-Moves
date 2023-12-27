@@ -1,4 +1,6 @@
 <script>
+  import ApplyFiltersButton from './ApplyFiltersButton.svelte';
+
 import Navbar from "$lib/components/Navbar.svelte";
 
 import SearchBar from './SearchBar.svelte';
@@ -16,13 +18,15 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
         <div id="Filters">
             <FilterOptions />
 
-            <button>Apply Filters</button>
+            <ApplyFiltersButton />
         </div>
 
         <div id="Properties-And-Search">
             <SearchBar />
 
-            <MobileFilter />
+            <div id="Mobile-Filter-Container">
+                <MobileFilter />
+            </div>
 
             <div id="Properties">
                 <PropertyPreview />
@@ -39,6 +43,10 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 </main>
 
 <style>
+    #Mobile-Filter-Container {
+        display: none;
+    }
+
     #Properties-And-Filters {
         margin-top: 15px;
         margin-left: 10px;
@@ -60,26 +68,6 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
         align-items: center;
     }
 
-    button:not(#Filter-Arrow-Container) {
-        cursor: pointer;
-        margin-top: 15px;
-
-        background-color: var(--dark_brown);
-        color: white;
-        
-        font-weight: bold;
-        font-size: 20px;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 15px;
-        padding-left: 15px;
-
-        border: none;
-        border-radius: 6px;
-        width: fit-content;
-    }
-
     #Properties-And-Search {
         width: 80%;
     }
@@ -93,6 +81,10 @@ import PropertyPreview from "$lib/components/PropertyPreview.svelte";
     }
 
     @media only screen and (max-width: 900px) {
+        #Mobile-Filter-Container {
+            display: block;
+        }
+
         #Filters {
             display: none;
         }
