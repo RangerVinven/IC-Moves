@@ -30,4 +30,15 @@
         border-radius: 5px;
     }
 
+    @media only screen and (max-width: 900px) {
+        #Filters-Container {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+        }
+    }
 </style>
