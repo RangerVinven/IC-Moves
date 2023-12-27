@@ -144,10 +144,7 @@
         font-size: 20px;
         font-weight: normal;
 
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 10px 15px 10px 15px;
 
         cursor: pointer;
     }
