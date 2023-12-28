@@ -1,12 +1,12 @@
 <script>
-  import ApplyFiltersButton from './ApplyFiltersButton.svelte';
+  import ApplyFiltersButton from './components/ApplyFiltersButton.svelte';
 
 import Navbar from "$lib/components/Navbar.svelte";
 
-import SearchBar from './SearchBar.svelte';
+import SearchBar from './components/SearchBar.svelte';
 
-import MobileFilter from './MobileFilter.svelte';
-import FilterOptions from "./FilterOptions.svelte";
+import MobileFilter from './components/MobileFilter.svelte';
+import FilterOptions from "./components/FilterOptions.svelte";
 
 import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 </script>
