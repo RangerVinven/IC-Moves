@@ -8,145 +8,126 @@
     import CallToAction from "./CallToAction.svelte";
 </script>
 
+
 <div id="Property-Preview">
-    <div>
-        <div id="Image-Container">
-            <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
+    <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
+    <h3>19 Greenview Cottage</h3>
+
+    <div id="Statistics">
+        <div class="Icon Bed">
+            <FaBed />
         </div>
-        
-        <div id="Info-Container">
-            <h3>19 Greenview Cottage</h3>
-            <div id="Statistics">
-                <div>
-                    <div class="Icon Bed">
-                        <FaBed />
-                    </div>
-                    <h6>3</h6>
-                </div>
-                <div>
-                    <div class="Icon Shower">
-                        <FaShower />
-                    </div>
-                    <h6>2</h6>
-                </div>
-                <div>
-                    <div class="Icon Bell">
-                        <FaBell />
-                    </div>
-                    <h6>3/10</h6>
-                </div>
-            </div>
+        <h6>3</h6>
+
+        <div class="Icon Shower">
+            <FaShower />
         </div>
+        <h6>4</h6>
+
+        <div class="Icon Bell">
+            <FaBell />
+        </div>
+        <h6>3/10</h6>
     </div>
 
-    <div id="Price-And-CallToAction">
-        <h6 id="Price">£256 pcm</h6>
+    <div>
+        <h3 id="Price">£256 PCM</h3>
         <button>Check It Out!</button>
     </div>
+
 </div>
 
 <style>
+
     #Property-Preview {
-        cursor: pointer;
-        width: 400px;
+        position: relative;
+
+        height: 400px;
         background-color: var(--light_brown);
-
-        border-radius: 2px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    #Image-Container {
-        width: 100%;
-        height: 65%;
     }
 
     #Preview-Image {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
+        width: 450px;
+        max-height: 300px;
     }
 
-    #Info-Container {
-        width: 100%;
-        height: 100%;
-
-        margin-left: 7px;
-    }
-
-    h3 {
-        margin: 0px;
-        font-weight: normal;
-        font-size: 26px;
-
+    h3, #Price {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 30px;
         color: white;
+        font-weight: normal;
+
+        font-family: Arial;
     }
 
     h6 {
         margin: 0;
-        font-size: 25px;
+        margin-left: 5px;
 
-        font-family: Arial;
+        display: inline-block;
+
         color: white;
+        
+        font-family: Arial;
         font-weight: normal;
+        font-size: 30px;
 
-        margin-left: 7px;
     }
 
     #Statistics {
-        display: flex;
-        gap: 30px;
-    }
-
-    #Statistics > div {
-        display: flex;
-        align-items: center;
-    }
-    #Statistics > div {
-        display: flex;
-        align-items: center;
+        margin-top: 5px;
     }
 
     .Icon {
-        height: 34px;
-        width: 34px;
+        width: 40px;
+        height: 40px;
 
         color: white;
+        margin: 0;
+        margin-left: 5px;
 
-        margin-top: 2px;
+        display: inline-block;
     }
 
     .Shower, .Bell {
+        margin-left: 30px;
+    }
+
+    .Bell {
         height: 30px;
         width: 30px;
     }
 
-    #Price-And-CallToAction {
-        width: 100%;
-        margin-bottom: 5px;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+    .Shower {
+        height: 33px;
+        width: 33px;
     }
 
-    #Price-And-CallToAction > button {
-        margin-right: 7px;
-        background-color: var(--dark_brown);
+    #Price {
+        position: absolute;
+        bottom: 0;
 
+        font-size: 25px;
+        margin-left: 2px;
+        margin-bottom: 1px;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        margin-right: 4px;
+        margin-bottom: 5px;
+
+        background-color: var(--dark_brown);
         border: none;
         border-radius: 5px;
 
+        font-size: 20px;
         color: white;
 
-        font-size: 20px;
-        font-weight: normal;
-
-        padding: 2% 7% 2% 7%;
-
-        cursor: pointer;
+        padding: 5px 10px 5px 10px;
     }
-    
 </style>
