@@ -28,6 +28,8 @@
 
         padding: 10px;
         border-radius: 5px;
+
+        width: 100%;
     }
 
     @media only screen and (max-width: 900px) {
