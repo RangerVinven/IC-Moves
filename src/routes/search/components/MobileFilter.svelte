@@ -70,6 +70,9 @@
             gap: 10px;
 
             width: fit-content;
+
+            /* Otherwise the text is blue on mobile */
+            color: black; 
         }
         
         #Filters-And-Arrow-Container > h3 {
