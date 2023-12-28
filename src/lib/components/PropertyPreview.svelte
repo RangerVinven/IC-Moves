@@ -130,4 +130,19 @@
 
         padding: 5px 10px 5px 10px;
     }
+
+    @media only screen and (max-width: 900px) {
+        #Property-Preview {
+            position: relative;
+
+            height: 400px;
+            background-color: var(--light_brown);
+        }
+
+        #Preview-Image {
+            width: 400px;
+            max-height: 300px;
+        }
+    }
+
 </style>
