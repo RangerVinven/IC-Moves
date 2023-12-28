@@ -42,5 +42,9 @@
 
             gap: 10px;
         }
+
+        button {
+            width: auto;
+        }
     }
 </style>
