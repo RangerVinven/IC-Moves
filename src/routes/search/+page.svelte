@@ -39,4 +39,14 @@ import PropertiesSearch from './components/PropertiesSearch.svelte';
         width: 80%;
     }
 
+    @media only screen and (max-width: 900px) {
+        #Desktop-Filter {
+            display: none;
+        }
+
+        #Properties-Search {
+            width: 100%;
+        }
+    }
+
 </style>
