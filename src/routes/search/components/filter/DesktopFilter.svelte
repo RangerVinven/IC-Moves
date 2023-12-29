@@ -13,14 +13,12 @@ import FilterOptions from "./FilterOptions.svelte";
 
 <style>
     #Filters {
-        width:15%;
         height: 50dvh;
 
         display: flex;
         flex-direction: column;
 
-        justify-content: center;
-        align-items: center;
+        width: fit-content;
     }
 
     @media only screen and (max-width: 900px) {
