@@ -1,10 +1,10 @@
 <script>
-    import PropertyPreview from "$lib/components/PropertyPreview.svelte";
+import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 import SearchBar from "./SearchBar.svelte";
 
 </script>
 
-<div style="margin-left: 25px;">
+<div id="Container">
     <SearchBar />
     
     <div id="Properties">
@@ -20,5 +20,18 @@ import SearchBar from "./SearchBar.svelte";
         flex-wrap: wrap;
 
         margin-top: 15px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        #Properties {
+            justify-content: center;
+        }
+
+        #Container {
+            display: flex;
+        
+            flex-direction: column;
+            align-items: center;
+        }
     }
 </style>
