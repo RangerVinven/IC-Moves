@@ -1,74 +1,37 @@
-<h1>Search</h1>
+<!-- <h1>Search</h1> -->
 <div id="Search-And-Button">
     <input id="Search" placeholder="Enter a specific property" type="text">
     <button>Search</button>
 </div>
 
 <style>
-    button:not(#Filter-Arrow-Container) {
-        cursor: pointer;
-        margin-top: 15px;
-
-        background-color: var(--dark_brown);
-        color: white;
-        
-        font-weight: bold;
-        font-size: 20px;
-
-        padding: 10px 15px 10px 15px;
-
-        border: none;
-        border-radius: 6px;
-        width: fit-content;
-    }
-
     #Search-And-Button {
-        margin-bottom: 10px;
+        height: fit-content;
+        display: flex;
+        
+        align-items: center;
     }
 
-    #Search-And-Button > input {
-        border-radius: 4px;
-        border-color: #D9D9D9;
-        border-style: solid;
+    input {
+        font-size: 25px;
+        padding-right: 17px;
 
-        padding: 10px;
-        padding-right: 11%;
-
-        font-size: 17px;
+        border-radius: 5px;
     }
 
-    #Search-And-Button > button {
-        margin-left: 15px;
-    }
+    button {
+        font-size: 20px;
+        font-weight: bold;
 
-    h1 {
-        visibility: hidden;
-    }
+        padding: 7px 15px 7px 15px;
+        margin-left: 10px;
 
-    @media only screen and (max-width: 900px) {
+        color: white;
+        background-color: var(--dark_brown);
 
-        h1 {
-            visibility: visible;
-            text-align: center;
-            font-size: 45px;
-
-            color: var(--light_brown);
-
-            margin: 0;
-        }
-
-        #Search-And-Button {
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            margin-top: 20px;
-        }
-
-        #Search {
-            width: 80%;
-        }
+        cursor: pointer;
+        
+        border: none;
+        border-radius: 5px;
     }
 </style>
