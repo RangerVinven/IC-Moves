@@ -139,12 +139,13 @@
         #Property-Preview {
             position: relative;
 
+            width: 350px;
             height: 400px;
             background-color: var(--light_brown);
         }
 
         #Preview-Image {
-            width: 400px;
+            width: 350px;
             max-height: 300px;
         }
     }
