@@ -43,7 +43,7 @@
     #Property-Preview {
         position: relative;
 
-        width: 450px;
+        max-width: 450px;
         height: 400px;
         background-color: var(--light_brown);
 
