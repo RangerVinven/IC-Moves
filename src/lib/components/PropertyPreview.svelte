@@ -5,7 +5,6 @@
     import FaShower from 'svelte-icons/fa/FaShower.svelte'
     // @ts-ignore - Otherwise I get a "FaBed is implicitly any type"
     import FaBell from 'svelte-icons/fa/FaBell.svelte'
-    import CallToAction from "./CallToAction.svelte";
 </script>
 
 
