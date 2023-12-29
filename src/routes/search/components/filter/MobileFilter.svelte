@@ -10,7 +10,7 @@
     $: isFilterDisplayed = false;
 </script>
 
-<div id="Mobile-Filters">
+<div id="Mobile-Filter">
     <div id="Filters-Container-Mobile">
         <button on:click={() => {isFilterDisplayed = !isFilterDisplayed}} id="Filters-And-Arrow-Container">
             <h3>Filters</h3>
