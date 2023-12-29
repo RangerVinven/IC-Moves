@@ -32,6 +32,10 @@
         width: 100%;
     }
 
+    button:hover {
+        background-color: var(--dark_brown);
+    }
+
     @media only screen and (max-width: 900px) {
         #Filters-Container {
             flex-direction: row;
