@@ -8,8 +8,8 @@
 </script>
 
 
-<div id="Property-Preview">
-    <a href="/search">
+<a href="/search">
+    <div id="Property-Preview">
         <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
         <h3>19 Greenview Cottage</h3>
 
@@ -34,10 +34,14 @@
             <h3 id="Price">£256 PCM</h3>
             <button>Check It Out!</button>
         </div>
-    </a>
-</div>
+    </div>
+</a>
 
 <style>
+
+    button {
+        cursor: pointer;
+    }
 
     a {
         text-decoration: none;
