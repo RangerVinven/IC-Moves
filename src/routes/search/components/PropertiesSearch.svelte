@@ -24,7 +24,7 @@ import SearchBar from "./SearchBar.svelte";
         display: flex;
         flex-wrap: wrap;
 
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     #Mobile-Filter {
