@@ -20,10 +20,4 @@ import FilterOptions from "./FilterOptions.svelte";
 
         width: fit-content;
     }
-
-    @media only screen and (max-width: 900px) {
-        #Filters {
-            display: none;
-        }
-    }
 </style>
