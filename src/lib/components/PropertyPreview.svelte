@@ -10,34 +10,39 @@
 
 
 <div id="Property-Preview">
-    <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
-    <h3>19 Greenview Cottage</h3>
+    <a href="/search">
+        <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
+        <h3>19 Greenview Cottage</h3>
 
-    <div id="Statistics">
-        <div class="Icon Bed">
-            <FaBed />
+        <div id="Statistics">
+            <div class="Icon Bed">
+                <FaBed />
+            </div>
+            <h6>3</h6>
+
+            <div class="Icon Shower">
+                <FaShower />
+            </div>
+            <h6>4</h6>
+
+            <div class="Icon Bell">
+                <FaBell />
+            </div>
+            <h6>3/10</h6>
         </div>
-        <h6>3</h6>
 
-        <div class="Icon Shower">
-            <FaShower />
+        <div>
+            <h3 id="Price">£256 PCM</h3>
+            <button>Check It Out!</button>
         </div>
-        <h6>4</h6>
-
-        <div class="Icon Bell">
-            <FaBell />
-        </div>
-        <h6>3/10</h6>
-    </div>
-
-    <div>
-        <h3 id="Price">£256 PCM</h3>
-        <button>Check It Out!</button>
-    </div>
-
+    </a>
 </div>
 
 <style>
+
+    a {
+        text-decoration: none;
+    }
 
     #Property-Preview {
         position: relative;
