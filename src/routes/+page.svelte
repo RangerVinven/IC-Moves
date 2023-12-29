@@ -1,15 +1,8 @@
 <script>
     import CallToAction from "$lib/components/CallToAction.svelte";
-    import Navbar from "$lib/components/Navbar.svelte"
     import HeroSection from "./HeroSection.svelte"
     import HomeBody from "./HomeBody.svelte";
 </script>
-
-<header>
-    <div style="margin-top: 0;position: absolute;width: 100%;">
-        <Navbar page="Home" />
-    </div>
-</header>
     
 <main>
     <div id="Hero-Section-Container">

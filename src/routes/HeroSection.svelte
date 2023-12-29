@@ -1,8 +1,14 @@
 <script>
     import CallToAction from "$lib/components/CallToAction.svelte";
+    import Navbar from "$lib/components/Navbar.svelte"
 </script>
 
+<div style="margin-top: 0;position: absolute;width: 100%;">
+    <Navbar page="Home" />
+</div>
+
 <div id="Hero-Section">
+
     <div id="Hero-Text">
         <h1>Find Your <i style="color: var(--light_brown)">Perfect</i> Home!</h1>  
         <h3><i>Helping people find their perfect home since 1999</i></h3>
