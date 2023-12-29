@@ -34,4 +34,14 @@
         border: none;
         border-radius: 5px;
     }
+
+    @media only screen and (max-width: 450px) {
+        #Search-And-Button {
+            flex-direction: column;            
+            align-items: center;
+
+            gap: 10px;
+        }
+    }
+
 </style>
