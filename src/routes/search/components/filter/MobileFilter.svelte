@@ -3,81 +3,62 @@
     import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte';
     // @ts-ignore
     import FaArrowDown from 'svelte-icons/fa/FaArrowDown.svelte';
-
     import FilterOptions from './FilterOptions.svelte';
     import FilterButtons from './FilterButtons.svelte';
 
     $: isFilterDisplayed = false;
 </script>
 
-<div id="Mobile-Filter">
-    <div id="Filters-Container-Mobile">
-        <button on:click={() => {isFilterDisplayed = !isFilterDisplayed}} id="Filters-And-Arrow-Container">
-            <h3>Filters</h3>
-            
-            <div id="Filter-Arrow-Container">
-                {#if !isFilterDisplayed}
-                    <FaArrowRight />
-                {:else}
-                    <FaArrowDown />
-                {/if}
-            </div>
+<div>
+    <button on:click={() => { isFilterDisplayed = !isFilterDisplayed }} id="Filters-Header">
+        <h3>Filters</h3>
 
-        </button>
+        <div id="Icon">
+            <!-- Changes the arrow's direction when the user presses "Filters >" -->
+            {#if isFilterDisplayed}
+                <FaArrowDown />
+            {:else}
+                <FaArrowRight />
+            {/if}
+        </div>
+    </button>
 
+    <div>
         {#if isFilterDisplayed}
             <FilterOptions />
-        {/if}
 
-        <div id="Apply-Filters-Button-Container">
-            <FilterButtons />
-        </div>
+            <div style="display:flex;justify-content:center;">
+                <FilterButtons />
+            </div>
+        {/if}
     </div>
+    
 </div>
 
 <style>
-    button {
-        background-color: transparent;
-        border: none;
+    h3 {
+        font-family: Arial;
+        font-size: 35px;
+
+        margin: 10px;
+    }
+
+    #Filters-Header {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
 
         cursor: pointer;
-    }
 
-    #Filter-Arrow-Container {
         background-color: transparent;
         border: none;
     }
 
-    #Apply-Filters-Button-Container {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
+    #Icon {
+        height: 30px;
+        width: 30px;
 
-    @media only screen and (max-width: 900px) {
-
-        #Filter-Arrow-Container {
-            height: 30px;
-            width: 30px;
-            height: fit-content;
-        }
-
-        #Filters-And-Arrow-Container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            width: fit-content;
-
-            /* Otherwise the text is blue on mobile */
-            color: black; 
-        }
-        
-        #Filters-And-Arrow-Container > h3 {
-            font-size: 35px;
-            font-family: Arial;
-
-            cursor: pointer;
-        }
+        margin-left: 10px;
     }
 </style>
