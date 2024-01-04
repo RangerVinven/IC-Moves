@@ -36,6 +36,7 @@ import PropertiesSearch from './components/PropertiesSearch.svelte';
     }
 
     #Properties-Search {
+        margin-left: 20px;
         width: 80%;
     }
 
