@@ -31,7 +31,7 @@ import SearchBar from "./SearchBar.svelte";
         display: none;
     }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1250px) {
         #Properties {
             justify-content: center;
         }
@@ -45,6 +45,7 @@ import SearchBar from "./SearchBar.svelte";
 
         #Mobile-Filter {
             display: block;
+            width: 100%;
         }
     }
 </style>
