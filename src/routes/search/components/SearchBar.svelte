@@ -17,6 +17,8 @@
         padding-right: 17px;
 
         border-radius: 5px;
+
+        border-color: silver;
     }
 
     button {
