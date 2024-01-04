@@ -67,7 +67,7 @@
         width: 100%;
     }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1250px) {
         #Filters-Container {
             flex-direction: row;
             flex-wrap: wrap;
@@ -76,6 +76,10 @@
             align-items: center;
 
             gap: 10px;
+        }
+
+        select {
+            width: fit-content
         }
     }
 </style>
