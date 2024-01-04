@@ -1,4 +1,3 @@
-
 <div>
     <button>Apply Filters</button>
     <button id="Clear">Clear Filters</button>
