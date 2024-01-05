@@ -9,13 +9,18 @@
 <Navbar />
 
 <!-- Container Div -->
-<div style="display: flex;justify-content:center;">
+<div id="Container">
     <PropertyTitle />
 
     <PropertyImages />
-
 </div>
 
 <style>
+    #Container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+        width: 100%;
+    }
 </style>
