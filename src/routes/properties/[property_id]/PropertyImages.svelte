@@ -1,31 +1,29 @@
-<div id="Container">
-    <div class="Relative-Div">
-        <div id="Main-Image-Container">
-            <img id="Main-Image" src="../assets/Property_Page/1.png" alt="A stone house">
-        </div>
-    </div>
-
-    <div class="Relative-Div">
-        <div id="Other-Images">
-            <div><img src="../assets/Property_Page/2.png" alt="A stone house"></div>
-            <div><img src="../assets/Property_Page/3.png" alt="A decorated living-room"></div>
-            <div><img src="../assets/Property_Page/4.png" alt="A nice kitchen"></div>
-            <div><img src="../assets/Property_Page/5.png" alt="A nice kitchen"></div>
-        </div>
-    </div>
-    
-</div>
+<table>
+    <tr>
+        <th>
+            <div class="Relative-Div">
+                <div id="Main-Image-Container">
+                    <img id="Main-Image" src="../assets/Property_Page/1.png" alt="A stone house">
+                </div>
+            </div>
+        </th>
+        <th>
+            <div class="Relative-Div">
+                <div id="Other-Images">
+                    <div><img src="../assets/Property_Page/2.png" alt="A stone house"></div>
+                    <div><img src="../assets/Property_Page/3.png" alt="A decorated living-room"></div>
+                    <div><img src="../assets/Property_Page/4.png" alt="A nice kitchen"></div>
+                    <div><img src="../assets/Property_Page/5.png" alt="A nice kitchen"></div>
+                </div>
+            </div>
+        </th>
+    </tr>
+</table>
 
 <style>
-    #Container {
-        display: flex;
-        justify-content: center;
 
-        gap: 10px;
-        width: 100%;
-        max-height: 50%;
-
-        position: relative
+    th {
+        vertical-align: top;
     }
 
     #Main-Image-Container {
@@ -35,6 +33,7 @@
 
     .Relative-Div {
         position: relative;
+        height: 600px;
     }
 
     #Main-Image {
@@ -47,7 +46,6 @@
         width: 300px;
         max-height: 100%;
 
-        position: absolute;
         overflow: scroll;
     }
 
