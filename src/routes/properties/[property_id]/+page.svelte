@@ -3,7 +3,7 @@
     import PropertyTitle from './PropertyTitle.svelte';
     import PropertyImages from "./PropertyImages.svelte";
 
-    export let data;
+    // export let data;
 </script>
 
 <Navbar />
