@@ -6,7 +6,7 @@
     // export let data;
 </script>
 
-<Navbar />
+<Navbar page="Search"/>
 
 <!-- Container Div -->
 <div id="Container">
