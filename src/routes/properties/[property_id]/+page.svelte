@@ -34,7 +34,7 @@
         </div>
 
         <Facilities />
-
+        <div style="margin-top: 12px;" />
         <MoreInfo />
     </div>
     
