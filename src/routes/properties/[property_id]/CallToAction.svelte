@@ -9,7 +9,7 @@
         align-items: center;
         flex-direction: column;
 
-        margin-top: 20px;
+        margin-top: 35px;
     }
 
     button {
@@ -24,6 +24,10 @@
         padding: 10px;
 
         cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--dark_brown);
     }
 
     h3 {
