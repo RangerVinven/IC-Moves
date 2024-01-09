@@ -1,11 +1,17 @@
 <script>
+    
     import Navbar from "$lib/components/Navbar.svelte";
+    
     import PropertyTitle from './PropertyTitle.svelte';
     import PropertyImages from "./PropertyImages.svelte";
+    
     import Facilities from "./Facilities.svelte";
     import MoreInfo from "./MoreInfo.svelte";
+    
+    import Map from './Map.svelte';
 
     import HeartIcon from "./HeartIcon.svelte";
+    import CallToAction from "./CallToAction.svelte";
 
     $: isPropertySaved = false;
 </script>
@@ -36,6 +42,10 @@
         <Facilities />
         <div style="margin-top: 12px;" />
         <MoreInfo />
+
+        <Map />
+
+        <CallToAction />
     </div>
     
 
