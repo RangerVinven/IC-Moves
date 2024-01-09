@@ -4,6 +4,7 @@
     import PropertyImages from "./PropertyImages.svelte";
 
     import HeartIcon from "./HeartIcon.svelte";
+    import Facilities from "./Facilities.svelte";
 
     $: isPropertySaved = false;
 </script>
@@ -30,6 +31,8 @@
             </button>
 
         </div>
+
+        <Facilities />
     </div>
     
 
