@@ -2,94 +2,44 @@
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
 </script>
 
-<table>
-    <tr>
-        <th>
-            <div class="Relative-Div">
-                <div id="Main-Image-Container">
-                    <img id="Main-Image" src="../assets/Property_Page/1.png" alt="A stone house">
-                </div>
-            </div>
-        </th>
-        <th>
-            <div class="Relative-Div">
-                <div id="Other-Images">
-                    <div><img src="../assets/Property_Page/2.png" alt="A stone house"></div>
-                    <div><img src="../assets/Property_Page/3.png" alt="A decorated living-room"></div>
-                    <div><img src="../assets/Property_Page/4.png" alt="A nice kitchen"></div>
-                    <div><img id="Final-Image" src="../assets/Property_Page/5.png" alt="A nice kitchen"></div>
-
-                    <a href="#Final-Image" id="Scroll-Down-Icon">
-                        <div id="Down-Arrow">
-                            <FaChevronDown />
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </th>
-    </tr>
-</table>
+<div id="PropertyImages">
+    <img id="Main-Image" src="../assets/Property_Page/1.png" alt="A stone house">
+    <div id="Other-Images">
+        <img src="../assets/Property_Page/2.png" alt="A stone house" />
+        <img src="../assets/Property_Page/3.png" alt="A decorated living-room" />
+        <img src="../assets/Property_Page/4.png" alt="A nice kitchen" />
+        <img src="../assets/Property_Page/5.png" alt="An empty attic room" />
+    </div>
+</div>
 
 <style>
-
-    #Down-Arrow {
-        height: 50px;
-        width: 50px;
-
-        color: rgba(0, 0, 0, 0.8);
-    }
-
-    #Scroll-Down-Icon {
-        width: 100%;
-        height: 50px;
-
-        background-color: rgba(221, 221, 221, 0.75);
-        border: none;
-
+    #PropertyImages {
         display: flex;
         justify-content: center;
-        align-items: center;
-
-        position: absolute;
-        bottom: 0;
-
-        cursor: pointer;
-    }
-
-    th {
-        vertical-align: top;
-    }
-
-    #Main-Image-Container {
-        height: 100%;
-        width: 100%;
-    }
-
-    .Relative-Div {
-        position: relative;
-        height: 600px;
+        align-items: flex-start;
     }
 
     #Main-Image {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        height: 580px;
+        width: 1020px;
     }
 
     #Other-Images {
-        width: 300px;
-        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: flex-start;
+        align-items: flex-start;
 
+        width: 300px;
+        margin-left: 15px;
+
+        height: 580px;
         overflow: scroll;
     }
 
-    #Other-Images > div {
+    #Other-Images > img {
         width: 100%;
-
-        object-fit: contain;
-    }
-
-    #Other-Images > div > img {
-        width: 100%;
+        height: auto;
     }
 </style>
