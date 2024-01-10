@@ -29,6 +29,10 @@
         isScrollButtonHidden = false;
     }
 
+    function scrollDown() {
+        otherImages.scrollBy(0, otherImages.clientHeight)
+    }
+
 </script>
 
 <div id="PropertyImages">
@@ -49,7 +53,7 @@
         <img src="../assets/Property_Page/5.png" alt="An empty attic room" />
         
         {#if !isScrollButtonHidden}
-            <button id="Scroll-Button" class={scrollButtonClass}>
+            <button on:click={scrollDown} id="Scroll-Button" class={scrollButtonClass}>
                 <FaChevronDown />
             </button>
         {/if}
