@@ -30,14 +30,15 @@
 
     <div>
         <h3 id="Price">£256 PCM</h3>
-        <button>Check It Out!</button>
+        <button><a href="/properties/1">Check It Out!</a></button>
     </div>
 </div>
 
 <style>
-
-    button {
-        cursor: pointer;
+    
+    a {
+        text-decoration: none;
+        color: white;
     }
 
     #Property-Preview {
