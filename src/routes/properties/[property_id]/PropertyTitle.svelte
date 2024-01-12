@@ -3,7 +3,7 @@
 </script>
 
 <div style="display: flex;align-items:center;gap: 15px;">
-        <button id="Left-Arrow">
+        <button on:click={() => history.back()} id="Left-Arrow">
             <FaChevronLeft />
         </button>
         <h1>19 Greenview Cottage - £295 PCM</h1>
