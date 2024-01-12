@@ -11,12 +11,14 @@
     #PropertyImages {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-start; 
     }
 
     #Main-Image {
-        height: 580px;
-        width: 1020px;
+        width: 90%;
+        height: auto;
+
+        max-height: 580px;
     }
 
 </style>
