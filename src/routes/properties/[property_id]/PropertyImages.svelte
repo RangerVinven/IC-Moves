@@ -21,4 +21,11 @@
         max-height: 580px;
     }
 
+    @media screen and (max-width: 1200px) {
+        #PropertyImages {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
 </style>
