@@ -56,4 +56,10 @@
 
         margin: 0;
     }
+
+    @media screen and (max-width: 1200px) {
+        #Facilities {
+            margin-left: 10px;
+        }
+    }
 </style>

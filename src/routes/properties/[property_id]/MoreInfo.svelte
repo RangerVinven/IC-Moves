@@ -28,4 +28,14 @@
         font-weight: normal;
         font-size: 30px;
     }
+
+    @media screen and (max-width: 1200px) {
+        #More-Info div {
+            row-gap: 0px;
+        }
+
+        h3 {
+            margin: 20px;
+        }
+    }
 </style>

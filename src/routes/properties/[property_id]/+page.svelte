@@ -95,4 +95,10 @@
 
         margin: 0px;
     }
+
+    @media screen and (max-width: 1200px) {
+        #Name-And-Heart {
+            margin-left: 10px;
+        }
+    }
 </style>

@@ -26,5 +26,12 @@
 
         cursor: pointer;
     }
+
+    @media screen and (max-width: 1200px) {
+        h1 {
+            text-align: center;
+            font-size: 45px;
+        }
+    }
 </style>
 
