@@ -126,7 +126,7 @@
             height: 150px;
         }
 
-        #Other-Images > img {
+        #Other-Images > button > img {
             width: auto;
             height: 100%;
         }
