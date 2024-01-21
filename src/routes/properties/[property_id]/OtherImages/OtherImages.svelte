@@ -24,14 +24,17 @@
         return false;
     }
 
+    // Hides the scroll to bottom arrow icon
     function hideScrollButton() {
         isScrollButtonHidden = true;
     }
 
+    // Shows the scroll to bottom arrow icon
     function showScrollButton() {
         isScrollButtonHidden = false;
     }
 
+    // Scrolls to the bottom of the images when the down arrow is pressed
     function scrollDown() {
         otherImagesDiv.scrollBy(0, otherImagesDiv.clientHeight);
     }
@@ -126,7 +129,12 @@
             height: 150px;
         }
 
-        #Other-Images > button > img {
+        #Other-Images > button, #Other-Images > button > img {
+            width: auto;
+            height: 100%;
+        }
+
+        #Other-Images > button {
             width: auto;
             height: 100%;
         }
