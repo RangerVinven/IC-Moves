@@ -1,6 +1,6 @@
 <div id="More-Info">
     <div>
-        <h3>Property Type - Flat</h3>
+        <h3>Property Type - House</h3>
         <h3>Rent - £295 PCM</h3>
         <h3>Council Tax - £50</h3>
         <h3>Furnished - Yes</h3>
