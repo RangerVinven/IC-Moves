@@ -3,7 +3,7 @@
     import Navbar from "$lib/components/Navbar.svelte"
 </script>
 
-<div style="margin-top: 0;position: absolute;width: 100%;">
+<div style="width: 100%;">
     <Navbar page="Home" />
 </div>
 
