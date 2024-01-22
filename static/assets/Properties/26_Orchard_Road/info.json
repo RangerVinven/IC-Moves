@@ -15,5 +15,13 @@
     "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.6828477315833!2d-2.0992828695505485!3d57.16188535125746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e11c405bf69%3A0x884bd97dd7520f91!2s26%20Orchard%20Rd%2C%20Aberdeen%20AB24%203DP!5e0!3m2!1sen!2suk!4v1705884358312!5m2!1sen!2suk",
     "realtorNumber": "07361 839125",
 
-    "ImagesFrom": "https://www.onthemarket.com/details/12758722/"
+    "ImagesFrom": "https://www.onthemarket.com/details/12758722/",
+
+    "images": {
+        "1": "A nice beige and white house with a black roof",
+        "2": "A large kitchen with a wood-pattern floor",
+        "3": "A study with a large bookshelf and a desk",
+        "4": "A bedroom with a couch next to the bed",
+        "5": "A living room with a couch and pictures. There's no TV"
+    }
 }
