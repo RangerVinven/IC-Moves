@@ -6,7 +6,6 @@ export async function load({ fetch, params }) {
     await fetch(`../assets/Properties/${params.property_id}/info.json`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             propertyData = data;
         });
     
