@@ -13,7 +13,7 @@
 
 <div id="PropertyImages">
     <img id="Main-Image" src="../assets/Properties/{data["folderPropertiesAreIn"]}/{mainImage}.jpg" alt="A stone house">
-    <OtherImages {changeMainImage} {data} />
+    <OtherImages {changeMainImage} {data} /> 
 </div>
 
 <style>
