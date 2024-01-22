@@ -1,0 +1,19 @@
+{
+    "properties": [
+        {
+            "name": "26 Orchard Road",
+            "address": "26 Orchard Road, Aberdeen, AB24 3DP",
+            "bedrooms": "2",
+            "showers": "1",
+            "noise-level": "4/10",
+
+            "property-type": "House",
+            "rent": "£800",
+            "council-tax": "£100",
+            "furnished": "No",
+
+            "folderPropertiesAreIn": "26_Orchard_Road",
+            "ImagesFrom": "https://www.onthemarket.com/details/12758722/"
+        }
+    ]
+}
