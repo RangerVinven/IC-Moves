@@ -8,13 +8,12 @@
 	export let data;
 
     let mainImage = "1";
-    let otherImages = {'1': 'A stone house', '2': 'A decorated living-room', '3': 'A landing with some rooms to the side', '4': 'A nice kitchen', '5': 'An empty attic'}
 
 </script>
 
 <div id="PropertyImages">
-    <img id="Main-Image" src="../assets/Property_Page/{mainImage}.png" alt="A stone house">
-    <OtherImages {changeMainImage} {otherImages} />
+    <img id="Main-Image" src="../assets/Properties/{data["folderPropertiesAreIn"]}/{mainImage}.jpg" alt="A stone house">
+    <OtherImages {changeMainImage} {data} />
 </div>
 
 <style>
