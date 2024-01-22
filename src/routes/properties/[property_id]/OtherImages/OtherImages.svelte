@@ -1,4 +1,6 @@
 <script lang="js">
+    export let data;
+
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
 
     let otherImagesDiv; // The Other-Images div
@@ -7,7 +9,6 @@
     let isScrollButtonHidden = false;
 
     export let changeMainImage; // Function to change the main image being displayed
-    export let otherImages;
 
     // Changes Scroll-Button to position absolute when Other-Images is scrolled to the top, position sticky otherwise
     function changeClassIfScrolledToTop() {
@@ -52,8 +53,8 @@
     }
 }} id="Other-Images">
 
-    {#each Object.entries(otherImages) as [image, altDescription]}
-        <button on:click={() => { changeMainImage(image) }} class="Other-Image-Button"><img src="../assets/Property_Page/{image}.png" alt={altDescription} /></button>
+    {#each Object.entries(data.images) as [image, altDescription]}
+        <button on:click={() => { changeMainImage(image) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folderPropertiesAreIn"]}/{image}.jpg" alt={altDescription} /></button>
     {/each}
     
     {#if !isScrollButtonHidden}
