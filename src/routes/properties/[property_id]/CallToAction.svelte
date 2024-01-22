@@ -1,6 +1,10 @@
+<script>
+    export let data; // The property info
+</script>
+
 <div id="Call-To-Action">
     <button>Call The Realtor Now!</button>
-    <h3>Or call them at 07563 837164</h3>
+    <h3>Or call them at {data["realtorNumber"]}</h3>
 </div>
 
 <style>

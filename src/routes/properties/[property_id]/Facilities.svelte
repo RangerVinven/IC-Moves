@@ -2,6 +2,8 @@
     import FaBed from 'svelte-icons/fa/FaBed.svelte'
     import FaShower from 'svelte-icons/fa/FaShower.svelte'
     import FaBell from 'svelte-icons/fa/FaBell.svelte'
+
+    export let data; // The property info
 </script>
 
 <div id="Facilities">
@@ -9,21 +11,21 @@
         <div class="Icon">
             <FaBed />
         </div>
-        <h6>3</h6>
+        <h6>{data.bedrooms}</h6>
     </div>
 
     <div class="Facility">
         <div class="Icon">
             <FaShower />
         </div>
-        <h6>2</h6>
+        <h6>{data.showers}</h6>
     </div>
 
     <div class="Facility">
         <div class="Icon">
             <FaBell />
         </div>
-        <h6>3/10</h6>
+        <h6>{data["noise-level"]}</h6>
     </div>
 </div>
 

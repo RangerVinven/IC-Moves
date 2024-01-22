@@ -14,6 +14,10 @@
     import CallToAction from "./CallToAction.svelte";
 
     $: isPropertySaved = false;
+
+   	/** @type {import('./$types').PageData} */
+	export let data;
+
 </script>
 
 <Navbar page="Search"/>
@@ -23,12 +27,12 @@
 
     <div>
         <div id="Property-Title">
-            <PropertyTitle />
+            <PropertyTitle title={data.name} rent={data.rent} />
         </div>
-        <PropertyImages />
+        <PropertyImages {data} />
 
         <div id="Name-And-Heart">
-            <h3>Rubislaw Den North, West End, AB15 8TS</h3>
+            <h3>{data.address}</h3>
 
             <button on:click={() => { isPropertySaved = !isPropertySaved }} id="Heart-Icon-Button">
                 <div id="Heart-Icon">
@@ -39,13 +43,13 @@
 
         </div>
 
-        <Facilities />
+        <Facilities {data} />
         <div style="margin-top: 12px;" />
-        <MoreInfo />
+        <MoreInfo {data} />
 
-        <Map />
+        <Map {data} />
 
-        <CallToAction />
+        <CallToAction {data} />
     </div>
     
 

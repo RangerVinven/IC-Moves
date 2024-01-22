@@ -1,12 +1,15 @@
 <script>
     import FaChevronLeft from 'svelte-icons/fa/FaChevronLeft.svelte'
+
+    export let title;
+    export let rent;
 </script>
 
 <div style="display: flex;align-items:center;gap: 15px;">
         <button on:click={() => history.back()} id="Left-Arrow">
             <FaChevronLeft />
         </button>
-        <h1>19 Greenview Cottage - £295 PCM</h1>
+        <h1>{title} - {rent} PCM</h1>
     </div>
 
 <style>
