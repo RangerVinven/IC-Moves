@@ -5,6 +5,8 @@
         mainImage = imageToChangeTo;
     }
 
+	export let data;
+
     let mainImage = "1";
     let otherImages = {'1': 'A stone house', '2': 'A decorated living-room', '3': 'A landing with some rooms to the side', '4': 'A nice kitchen', '5': 'An empty attic'}
 
