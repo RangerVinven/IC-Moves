@@ -5,32 +5,40 @@
     import FaShower from 'svelte-icons/fa/FaShower.svelte'
     // @ts-ignore - Otherwise I get a "FaBed is implicitly any type"
     import FaBell from 'svelte-icons/fa/FaBell.svelte'
+
+    export let name;
+    export let numOfBeds;
+    export let numOfShowers;
+    export let noiseLevel;
+    export let rent;
+    export let folderPropertyImagesAreIn;
+    export let id;
 </script>
 
 <div id="Property-Preview">
-    <img id="Preview-Image" src="assets/Search_Page/House_Preview.png" alt="A stone house">
-    <h3>19 Greenview Cottage</h3>
+    <img id="Preview-Image" src="assets/Properties/{folderPropertyImagesAreIn}/1.jpg" alt="A stone house">
+    <h3>{name}</h3>
 
     <div id="Statistics">
         <div class="Icon Bed">
             <FaBed />
         </div>
-        <h6>3</h6>
+        <h6>{numOfBeds}</h6>
 
         <div class="Icon Shower">
             <FaShower />
         </div>
-        <h6>4</h6>
+        <h6>{numOfShowers}</h6>
 
         <div class="Icon Bell">
             <FaBell />
         </div>
-        <h6>3/10</h6>
+        <h6>{noiseLevel}</h6>
     </div>
 
     <div>
-        <h3 id="Price">£256 PCM</h3>
-        <button><a href="/properties/1">Check It Out!</a></button>
+        <h3 id="Price">{rent} PCM</h3>
+        <button><a href="/properties/{id}">Check It Out!</a></button>
     </div>
 </div>
 
@@ -45,7 +53,7 @@
         position: relative;
 
         max-width: 450px;
-        height: 400px;
+        height: 450px;
         background-color: var(--light_brown);
 
         margin: 10px;
