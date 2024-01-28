@@ -4,10 +4,10 @@
 
 <div id="More-Info">
     <div>
-        <h3>Property Type - {data["property-type"]}</h3>
+        <h3>Property Type - {data["property_type"]}</h3>
         <h3>Rent - {data.rent} PCM</h3>
-        <h3>Council Tax - {data["council-tax"]}</h3>
-        <h3>Furnished - {data.furnished}</h3>
+        <h3>Council Tax - £{data["council_tax"]}</h3>
+        <h3>Furnished - {data.furnished === false ? "No" : "Yes"}</h3>
     </div>
 </div>
 

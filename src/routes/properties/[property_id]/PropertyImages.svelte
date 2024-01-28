@@ -12,7 +12,7 @@
 </script>
 
 <div id="PropertyImages">
-    <img id="Main-Image" src="../assets/Properties/{data["folderPropertiesAreIn"]}/{mainImage}.jpg" alt="A stone house">
+    <img id="Main-Image" src="../assets/Properties/{data["folder"]}/{mainImage}.jpg" alt="A stone house">
     <OtherImages {changeMainImage} {data} /> 
 </div>
 
