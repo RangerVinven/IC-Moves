@@ -25,7 +25,7 @@ onMount(async () => {
     
     <div id="Properties">
         {#each properties as property}
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn="26_Orchard_Road" />
+            <PropertyPreview id={property.id} name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
             <!-- <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
             <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
             <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} /> -->
