@@ -53,9 +53,16 @@
     }
 }} id="Other-Images">
 
-    {#each Object.entries(data.images) as [image, altDescription]}
-        <button on:click={() => { changeMainImage(image) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folderPropertiesAreIn"]}/{image}.jpg" alt={altDescription} /></button>
-    {/each}
+    <!-- {#each Object.entries(data.images) as [image, altDescription]}
+        <button on:click={() => { changeMainImage(image) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{image}.jpg" alt={altDescription} /></button>
+    {/each} -->
+
+    <button on:click={() => { changeMainImage(1) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{1}.jpg" /></button>
+    <button on:click={() => { changeMainImage(2) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{2}.jpg" /></button>
+    <button on:click={() => { changeMainImage(3) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{3}.jpg" /></button>
+    <button on:click={() => { changeMainImage(4) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{4}.jpg" /></button>
+    <button on:click={() => { changeMainImage(5) }} class="Other-Image-Button"><img src="../assets/Properties/{data["folder"]}/{5}.jpg" /></button>
+
     
     {#if !isScrollButtonHidden}
     <button on:click={scrollDown} id="Scroll-Button" class={scrollButtonClass}>
