@@ -53,7 +53,7 @@
     }
 
     #Hero-Image-Container {
-        width: 500px;
+        width: 600px;
         height: auto;
 
         margin-right: 50px;
@@ -102,5 +102,12 @@
         #Hero-Text {
             text-align: center;
         }
-}
+    }
+
+    @media only screen and (min-width: 1800px) {
+            #Hero-Image-Container {
+                width: 750px;
+            }
+    }
+
 </style>
