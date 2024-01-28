@@ -1,15 +1,16 @@
 <script>
+import { Circle } from "svelte-loading-spinners";
+
 import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 import { onMount } from "svelte";
 import MobileFilter from "./filter/MobileFilter.svelte";
 import SearchBar from "./SearchBar.svelte";
 
-let properties = [];
+$: properties = [];
 onMount(async () => {
     fetch("http://localhost:3000/properties")
     .then(res => res.json())
     .then(data => {
-        console.log(data);
         properties = data;
     });
 })
@@ -24,16 +25,31 @@ onMount(async () => {
     </div>
     
     <div id="Properties">
-        {#each properties as property}
-            <PropertyPreview id={property.id} name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
-            <!-- <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} /> -->
-        {/each}
+
+        <!-- Displays a spinner icon while awaiting the API response -->
+        {#if properties.length === 0}
+            <div id="Loading-Icon">
+                <Circle color="var(--dark_brown)" size=80 />
+            </div>
+        {:else}
+
+            {#each properties as property}
+                <PropertyPreview id={property.id} name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
+            {/each}
+
+        {/if}
     </div>
 </div>
 
 <style>
+    #Loading-Icon {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     #Properties {
         display: flex;
         flex-wrap: wrap;
