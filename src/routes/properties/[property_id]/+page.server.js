@@ -3,7 +3,7 @@
 export async function load({ fetch, params }) {
 
     let propertyData = {};
-    await fetch(`../assets/Properties/${params.property_id}/info.json`)
+    await fetch("http://localhost:3000/properties/" + params.property_id)
         .then(res => res.json())
         .then(data => {
             propertyData = data;
