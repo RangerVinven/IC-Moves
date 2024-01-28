@@ -6,10 +6,11 @@ import SearchBar from "./SearchBar.svelte";
 
 let properties = [];
 onMount(async () => {
-    fetch("properties.json")
+    fetch("http://localhost:3000/properties")
     .then(res => res.json())
     .then(data => {
-        properties = data["properties"];
+        console.log(data);
+        properties = data;
     });
 })
 
@@ -24,10 +25,10 @@ onMount(async () => {
     
     <div id="Properties">
         {#each properties as property}
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise-level"]} rent={property.rent} folderPropertyImagesAreIn={property.folderPropertiesAreIn} />
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise-level"]} rent={property.rent} folderPropertyImagesAreIn={property.folderPropertiesAreIn} />
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise-level"]} rent={property.rent} folderPropertyImagesAreIn={property.folderPropertiesAreIn} />
-            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise-level"]} rent={property.rent} folderPropertyImagesAreIn={property.folderPropertiesAreIn} />
+            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn="26_Orchard_Road" />
+            <!-- <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
+            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} />
+            <PropertyPreview name={property.name} numOfBeds={property.bedrooms} numOfShowers={property.showers} noiseLevel={property["noise_level"]} rent={property.rent} folderPropertyImagesAreIn={property.folder} /> -->
         {/each}
     </div>
 </div>
