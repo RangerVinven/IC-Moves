@@ -9,7 +9,7 @@
         <button on:click={() => history.back()} id="Left-Arrow">
             <FaChevronLeft />
         </button>
-        <h1>{title} - {rent} PCM</h1>
+        <h1>{title} - £{rent} PCM</h1>
     </div>
 
 <style>
