@@ -37,7 +37,7 @@
     </div>
 
     <div>
-        <h3 id="Price">{rent} PCM</h3>
+        <h3 id="Price">£{rent} PCM</h3>
         <button><a href="/properties/{id}">Check It Out!</a></button>
     </div>
 </div>
