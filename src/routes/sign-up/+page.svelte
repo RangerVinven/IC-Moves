@@ -1,5 +1,6 @@
 <script>
     import Navbar from "$lib/components/Navbar.svelte";
+    import SessionTokenStore from "../../stores/SessionTokenStore";
 
     let email = "";
     let password = "";
@@ -26,7 +27,7 @@
         if(res.status === 201) {
             const data = await res.json();
 
-            document.cookie = data["token"];
+            SessionTokenStore.set(data["token"])
             incorrectCreds = false;
 
         // If the passwords don't match
