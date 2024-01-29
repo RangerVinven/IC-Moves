@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@tabler/icons-svelte": "^2.45.0",
 		"svelte-icons": "^2.1.0",
+		"svelte-loading-spinners": "^0.3.4",
 		"unplugin-icons": "^0.18.1"
 	}
 }
