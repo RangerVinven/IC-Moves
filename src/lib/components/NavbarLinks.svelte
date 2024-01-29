@@ -5,7 +5,7 @@
 <li><a id={page === "Home" ? "active" : ""} href="/">Home</a></li>
 <li><a id={page === "Search" ? "active" : ""} href="/search">Search Properties</a></li>
 <li><a id={page === "Login" ? "active" : ""} href="/login">Login</a></li>
-<li><a id={page === "Sign-Up" ? "active" : ""} href="/#">Sign-Up</a></li>
+<li><a id={page === "Sign-Up" ? "active" : ""} href="/sign-up">Sign-Up</a></li>
 
 <style>
     li {
