@@ -1,50 +1,30 @@
 <script>
-    
-    import Navbar from "$lib/components/Navbar.svelte";
-    
-    import PropertyTitle from './PropertyTitle.svelte';
-    import PropertyImages from "./PropertyImages.svelte";
-    
-    import Facilities from "./Facilities.svelte";
-    import MoreInfo from "./MoreInfo.svelte";
-    
-    import Map from './Map.svelte';
+import Navbar from "$lib/components/Navbar.svelte";
 
-    import HeartIcon from "./HeartIcon.svelte";
-    import CallToAction from "./CallToAction.svelte";
-    
-    import { onMount } from "svelte";
-    import SessionTokenStore from "$lib/stores/SessionTokenStore";
-    
-    // /** @type {import('./$types').PageData} */
-	// export let data;
-    
-    let isPropertySaved = false;    
-    
-    let data = {};
-    
+import PropertyTitle from './PropertyTitle.svelte';
+import PropertyImages from "./PropertyImages.svelte";
 
-    onMount(async () => {
+import Facilities from "./Facilities.svelte";
+import MoreInfo from "./MoreInfo.svelte";
 
-        // // Gets the session token
-        // let sessionToken = "";
-        // SessionTokenStore.subscribe(token => {
-        //     sessionToken = token;
-        // })
+import Map from './Map.svelte';
 
-        // const res = await fetch("http://localhost:3000/saved_properties/all", {
-        //     headers: {
-        //         "Cookie": sessionToken
-        //     }
-        // });
-        // const data = await res.json();
+import HeartIcon from "./HeartIcon.svelte";
+import CallToAction from "./CallToAction.svelte";
 
-        const response = await fetch("http://localhost:8000/properties/1");
-        const response_data = await response.json();
+export let data;
+let isPropertySaved = false;
 
-        data = response_data;
-    })
-    
+async function saveProperty(method) {
+
+    const res = fetch("http://127.0.0.1:8000/saved/" + data["id"], {
+        method: method,
+        headers: {
+            "session_token": localStorage.getItem("session_token")
+        }
+    });
+}
+
 </script>
 
 <Navbar page="Search"/>
@@ -61,7 +41,16 @@
         <div id="Name-And-Heart">
             <h3>{data.address}</h3>
 
-            <button on:click={() => { isPropertySaved = !isPropertySaved }} id="Heart-Icon-Button">
+            <button on:click={() => {
+                    isPropertySaved = !isPropertySaved;
+
+                    // GET for saving a property, DELETE for deleting one
+                    if(isPropertySaved) {
+                        saveProperty("GET");
+                    } else {
+                        saveProperty("DELETE");
+                    }
+                }} id="Heart-Icon-Button">
                 <div id="Heart-Icon">
                     <HeartIcon isFilled={isPropertySaved} />
                 </div>
@@ -83,6 +72,13 @@
 </div>
 
 <style>
+    #Circle-Icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     #Container {
         display: flex;
         flex-direction: column;
