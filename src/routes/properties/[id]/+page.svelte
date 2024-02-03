@@ -13,16 +13,30 @@ import HeartIcon from "./HeartIcon.svelte";
 import CallToAction from "./CallToAction.svelte";
 
 export let data;
-let isPropertySaved = false;
+let isPropertySaved;
 
 async function saveProperty(method) {
-
     const res = fetch("http://127.0.0.1:8000/saved/" + data["id"], {
         method: method,
         headers: {
             "session_token": localStorage.getItem("session_token")
         }
     });
+}
+
+async function isSavedFunction() {
+    const res = await fetch("http://127.0.0.1:8000/properties/" + data["id"] + "/is_saved", {
+        headers: {
+            "session_token": localStorage.getItem("session_token")
+        }
+    });
+    const resData = await res.text();
+
+    if (resData === "true") {
+        isPropertySaved = true;
+    } else {
+        isPropertySaved = false;
+    }
 }
 
 </script>
@@ -51,8 +65,9 @@ async function saveProperty(method) {
                         saveProperty("DELETE");
                     }
                 }} id="Heart-Icon-Button">
+
                 <div id="Heart-Icon">
-                    <HeartIcon isFilled={isPropertySaved} />
+                    <HeartIcon isFilled={isPropertySaved} {isSavedFunction} />
                 </div>
 
             </button>
