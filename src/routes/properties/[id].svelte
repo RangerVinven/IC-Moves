@@ -12,12 +12,39 @@
 
     import HeartIcon from "./HeartIcon.svelte";
     import CallToAction from "./CallToAction.svelte";
+    
+    import { onMount } from "svelte";
+    import SessionTokenStore from "$lib/stores/SessionTokenStore";
+    
+    // /** @type {import('./$types').PageData} */
+	// export let data;
+    
+    let isPropertySaved = false;    
+    
+    let data = {};
+    
 
-    $: isPropertySaved = false;
+    onMount(async () => {
 
-   	/** @type {import('./$types').PageData} */
-	export let data;
+        // // Gets the session token
+        // let sessionToken = "";
+        // SessionTokenStore.subscribe(token => {
+        //     sessionToken = token;
+        // })
 
+        // const res = await fetch("http://localhost:3000/saved_properties/all", {
+        //     headers: {
+        //         "Cookie": sessionToken
+        //     }
+        // });
+        // const data = await res.json();
+
+        const response = await fetch("http://localhost:8000/properties/1");
+        const response_data = await response.json();
+
+        data = response_data;
+    })
+    
 </script>
 
 <Navbar page="Search"/>
