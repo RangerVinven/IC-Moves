@@ -1,16 +1,18 @@
 <script>
+    import { goto } from "$app/navigation";
     import Navbar from "$lib/components/Navbar.svelte";
-    import SessionTokenStore from "../../stores/SessionTokenStore";
+    import SessionTokenStore from "../../lib/stores/SessionTokenStore";
 
     let email = "";
     let password = "";
     let verifyPassword = "";
 
-    let incorrectCreds = false;
+    let hasError = false;
+    let errorMessage;
 
     // Gets the session token if the credentials are correct
     async function signUp(email, password) {
-        const res = await fetch("http://localhost:3000/sign-up", {
+        const res = await fetch("http://localhost:8000/users/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -24,19 +26,25 @@
         })
 
         // If the sign-up was successful
-        if(res.status === 201) {
+        if(res.status === 200) {
             const data = await res.json();
 
             SessionTokenStore.set(data["token"])
-            incorrectCreds = false;
+
+            goto("/");
 
         // If the passwords don't match
-        } else if (res.status === 400) {
-            incorrectCreds = true;
+        } else if (res.status === 401) {
+            hasError = true;
+            errorMessage = "Passwords don't match"
 
-        // Something went wrong 
+        // If the email already exists in the database
+        } else if (res.status === 409) {
+            hasError = true;
+            errorMessage = "An account with that email already exists"
         } else {
-            // Add something went wrong
+            hasError = true;
+            errorMessage = "Something went wrong"
         }
     }
 
@@ -70,9 +78,9 @@
                 <button on:click={() => signUp(email, password)}>Sign-Up</button>
             </div>
 
-            {#if incorrectCreds}
+            {#if hasError}
                 <div id="Error-Message">
-                    <h6><i>Passwords don't match</i></h6>
+                    <h6><i>{errorMessage}</i></h6>
                 </div>
             {/if}
 
