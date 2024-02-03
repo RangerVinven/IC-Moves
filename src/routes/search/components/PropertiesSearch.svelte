@@ -1,20 +1,19 @@
 <script>
-import { Circle } from "svelte-loading-spinners";
-
 import PropertyPreview from "$lib/components/PropertyPreview.svelte";
-import { onMount } from "svelte";
 import MobileFilter from "./filter/MobileFilter.svelte";
 import SearchBar from "./SearchBar.svelte";
+    
+import { Circle } from "svelte-loading-spinners";
+import { onMount } from "svelte"
 
 $: properties = [];
-onMount(async () => {
-    fetch("http://localhost:3000/properties")
-    .then(res => res.json())
-    .then(data => {
-        properties = data;
-    });
-})
 
+onMount(async () => {
+    const response = await fetch("http://localhost:8000/properties/");
+    const data = await response.json();
+
+    properties = data;
+})
 </script>
 
 <div id="Container">
