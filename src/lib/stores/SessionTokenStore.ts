@@ -10,8 +10,8 @@ if(session_token) {
 }
 
 // Saves the session_token to the localStorage whenever it changes
-SessionTokenStore.subscribe(token => {
-    browser && localStorage.setItem("session_token", token)
+SessionTokenStore.subscribe(token => {   
+    browser && localStorage.setItem("session_token", token);
 })
 
 export default SessionTokenStore;
