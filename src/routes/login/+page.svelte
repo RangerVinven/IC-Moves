@@ -1,6 +1,7 @@
 <script>
     import Navbar from "$lib/components/Navbar.svelte";
     import SessionTokenStore from "../../lib/stores/SessionTokenStore";
+    import { goto } from "$app/navigation";
 
     let email = "";
     let password = "";
@@ -9,7 +10,7 @@
 
     // Gets the session token if the credentials are correct
     async function login(email, password) {
-        const res = await fetch("http://localhost:3000/login", {
+        const res = await fetch("http://127.0.0.1:8000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,8 +26,11 @@
         if(res.status === 200) {
             const data = await res.json();
 
-            SessionTokenStore.set(data["token"])
-            incorrectCreds = false;
+            // Saves the session token
+            SessionTokenStore.set(data["token"]);
+            
+            // Redirects to /
+            goto("/");
 
         // If the login details were wrong
         } else if (res.status === 401) {
