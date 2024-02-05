@@ -3,11 +3,17 @@
 </script>
 
 <div id="Call-To-Action">
-    <button>Call The Realtor Now!</button>
+    <button><a href={"tel:" + data["realtor_number"].replace(" ", "")}>Call The Realtor Now!</a></button>
     <h3>Or call them later at {data["realtor_number"]}</h3>
 </div>
 
 <style>
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
     #Call-To-Action {
         display: flex;
         align-items: center;
