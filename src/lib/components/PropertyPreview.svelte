@@ -6,39 +6,33 @@
     // @ts-ignore - Otherwise I get a "FaBed is implicitly any type"
     import FaBell from 'svelte-icons/fa/FaBell.svelte'
 
-    export let name;
-    export let numOfBeds;
-    export let numOfShowers;
-    export let noiseLevel;
-    export let rent;
-    export let folderPropertyImagesAreIn;
-    export let id;
+export let property;
 </script>
 
 <div id="Property-Preview">
-    <img id="Preview-Image" src="assets/Properties/{folderPropertyImagesAreIn}/1.jpg" alt="A stone house">
-    <h3>{name}</h3>
+    <img id="Preview-Image" src="assets/Properties/{property.folder}/1.jpg" alt={property.alt_description} />
+    <h3>{property.name}</h3>
 
     <div id="Statistics">
         <div class="Icon Bed">
             <FaBed />
         </div>
-        <h6>{numOfBeds}</h6>
+        <h6>{property.bedrooms}</h6>
 
         <div class="Icon Shower">
             <FaShower />
         </div>
-        <h6>{numOfShowers}</h6>
+        <h6>{property.showers}</h6>
 
         <div class="Icon Bell">
             <FaBell />
         </div>
-        <h6>{noiseLevel}</h6>
+        <h6>{property["noise_level"]}</h6>
     </div>
 
     <div>
-        <h3 id="Price">£{rent} PCM</h3>
-        <button><a href="/properties/{id}">Check It Out!</a></button>
+        <h3 id="Price">£{property.rent} PCM</h3>
+        <button><a href="/properties/{property.id}">Check It Out!</a></button>
     </div>
 </div>
 
