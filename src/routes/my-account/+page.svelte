@@ -1,7 +1,9 @@
 <script>
     import Navbar from "$lib/components/Navbar.svelte";
+    
     import YourEmailOption from "./YourEmailOption.svelte";
     import YourPasswordOption from "./YourPasswordOption.svelte";
+    import DeleteAccount from "./DeleteAccount.svelte";
 
     import Properties from "./Properties.svelte";
 
@@ -33,6 +35,10 @@
     
         <YourEmailOption {email} />
         <YourPasswordOption />
+
+        <div id="Delete-Account-Container">
+            <DeleteAccount />
+        </div>
     </div>
 
     <div id="Saved-Properties">
@@ -78,7 +84,9 @@
         width: 100%;
     }
 
-    
+    #Delete-Account-Container {
+        margin-top: 20px;
+    }
 
     @media only screen and (max-width: 600px) {
         #Your-Account {
