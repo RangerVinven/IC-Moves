@@ -16,7 +16,7 @@
     <li><a id={page === "Login" ? "active" : ""} href="/login">Login</a></li>
     <li><a id={page === "Sign-Up" ? "active" : ""} href="/sign-up">Sign-Up</a></li>
 {:else}
-    <li><a id={page === "My Account" ? "active" : ""} href="/myaccount">My Account</a></li>
+    <li><a id={page === "My Account" ? "active" : ""} href="/my-account">My Account</a></li>
     <li><a id={page === "Sign-Out" ? "active" : ""} href="/signout">Sign-Out</a></li>
 {/if}
 
