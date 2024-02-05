@@ -40,6 +40,10 @@
 
         <Properties />
     </div>
+
+    <div id="Clear-Saved-Div">
+        <button>Clear Saved</button>
+    </div>
 </div>
 
 <style>
@@ -77,9 +81,41 @@
         width: 100%;
     }
 
+    #Clear-Saved-Div {
+        display: flex;
+        justify-content: right;
+        margin-right: 15px;
+        
+
+        width: 100%;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+
+        font-size: 20px;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+
+        background-color: var(--dark_brown);
+        color: white;
+
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--light_brown);
+    }
+
     @media only screen and (max-width: 600px) {
         #Your-Account {
             width: 70%;
+        }
+
+        #Clear-Saved-Div {
+            margin-top: 20px;
+            justify-content: center;
         }
     }
 </style>
