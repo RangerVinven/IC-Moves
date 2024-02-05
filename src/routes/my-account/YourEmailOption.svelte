@@ -44,7 +44,7 @@
 <h3>Your Email:</h3>
 
 <div id="Input-Fields">
-    <input type="text" bind:value={email} disabled={isDisabled}>
+    <input type="text" bind:value={email} placeholder="Your email" disabled={isDisabled}>
     <button on:click={buttonPressed}>{buttonText}</button>
 </div>
 
