@@ -87,13 +87,6 @@ async function isSavedFunction() {
 </div>
 
 <style>
-    #Circle-Icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     #Container {
         display: flex;
         flex-direction: column;
