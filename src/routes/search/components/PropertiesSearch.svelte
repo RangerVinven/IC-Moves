@@ -7,17 +7,38 @@ import { Circle } from "svelte-loading-spinners";
 import { onMount } from "svelte"
 
 $: properties = [];
+let propertiesEmpty = false;
+let propertiesBackup;
 
 onMount(async () => {
     const response = await fetch("http://localhost:8000/properties/");
     const data = await response.json();
 
     properties = data;
+    propertiesBackup = properties;
 })
+
+// Searches the properties for ones iwth specific characters
+function searchProperties(searchText) {
+    if(searchText === "") {
+        properties = propertiesBackup;
+        propertiesEmpty = false;
+    } else {
+        const newProperties = propertiesBackup.filter(property => property["name"].toLowerCase().includes(searchText.toLowerCase()));
+        properties = newProperties;
+
+        // If there's no properties that match that search
+        if(properties.length === 0) {
+            propertiesEmpty = true;
+        } else {
+            propertiesEmpty = false;
+        }
+    }
+}
 </script>
 
 <div id="Container">
-    <SearchBar />
+    <SearchBar {searchProperties} />
 
     <div id="Mobile-Filter">
         <MobileFilter />
@@ -26,10 +47,13 @@ onMount(async () => {
     <div id="Properties">
 
         <!-- Displays a spinner icon while awaiting the API response -->
-        {#if properties.length === 0}
+        {#if properties.length === 0 && propertiesEmpty === false}
             <div id="Loading-Icon">
                 <Circle color="var(--dark_brown)" size=80 />
             </div>
+
+        {:else if propertiesEmpty}
+            <h3>No properties matches that search</h3>
         {:else}
 
             {#each properties as property}
@@ -58,6 +82,11 @@ onMount(async () => {
 
     #Mobile-Filter {
         display: none;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: normal;
     }
 
     @media only screen and (max-width: 1250px) {

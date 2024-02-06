@@ -1,7 +1,15 @@
-<!-- <h1>Search</h1> -->
+<script>
+    export let searchProperties;
+    let searchText;
+</script>
+
 <div id="Search-And-Button">
-    <input id="Search" placeholder="Enter a specific property" type="text">
-    <button>Search</button>
+    <input bind:value={searchText} id="Search" placeholder="Enter a specific property" type="text">
+    <button class="Search-Btn" on:click={() => searchProperties(searchText)}>Search</button>
+    <button class="Clear-Btn" on:click={() => {
+        searchText = "";
+        searchProperties("");
+    }}>Clear Search</button>
 </div>
 
 <style>
@@ -28,13 +36,26 @@
         padding: 7px 15px 7px 15px;
         margin-left: 10px;
 
-        color: white;
-        background-color: var(--dark_brown);
+        
 
         cursor: pointer;
         
         border: none;
         border-radius: 5px;
+    }
+
+    .Search-Btn {
+        color: white;
+        background-color: var(--dark_brown);
+    }
+
+    .Clear-Btn {
+        border: solid var(--dark_brown);
+        border-width: 2px;
+
+        font-weight: normal;
+        background-color: transparent;
+        font-size: 19px;
     }
 
     @media only screen and (max-width: 450px) {
