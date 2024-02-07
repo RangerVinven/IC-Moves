@@ -1,43 +1,47 @@
+<script>
+    import FiltersStore from "$lib/stores/SearchFilters"
+</script>
+
 <div id="Filters-Container">
-    <select name="Sort-By">
-        <option value="Sort-By" disabled selected>Sort By</option>
-        <option value="Price-Low-High">Price (low-high)</option>
-        <option value="Price-High-Low">Price (high-low)</option>
-        <option value="Bedrooms-Low-High">Bedrooms (low-high)</option>
-        <option value="Bedrooms-High-Low">Bedrooms (high-low)</option>
-        <option value="Showers-Low-High">Showers (low-high)</option>
-        <option value="Showers-High-Low">Showers (high-low)</option>
-        <option value="Noise-Low-High">Noise (low-high)</option>
-        <option value="Noise-High-Low">Noise (high-low)</option>
+    <select bind:value={$FiltersStore.sort_by} name="Sort-By">
+        <option value="" disabled selected>Sort By</option>
+        <option value="rent asc">Price (low-high)</option>
+        <option value="rent desc">Price (high-low)</option>
+        <option value="bedrooms asc">Bedrooms (low-high)</option>
+        <option value="bedrooms desc">Bedrooms (high-low)</option>
+        <option value="showers asc">Showers (low-high)</option>
+        <option value="showers desc">Showers (high-low)</option>
+        <option value="noise_level asc">Noise (low-high)</option>
+        <option value="noise_level desc">Noise (high-low)</option>
     </select>
     
-    <select name="Type">
-        <option value="Property-Type" disabled selected>Property Type</option>
+    <select bind:value={$FiltersStore["property_type"]} name="Type">
+        <option value="" disabled selected>Property Type</option>
         <option value="House">House</option>
         <option value="Flat">Flat</option>
     </select>
 
-    <select name="Bedrooms">
-        <option value="Bedrooms" disabled selected>Bedrooms</option>
-        <option value="One-Or-More">1+</option>
-        <option value="Two-Or-More">2+</option>
-        <option value="Three-Or-More">3+</option>
-        <option value="Four-Or-More">4+</option>
+    <select bind:value={$FiltersStore["min_bedrooms"]} name="Bedrooms">
+        <option value="" disabled selected>Bedrooms</option>
+        <option value=1>1+</option>
+        <option value=2>2+</option>
+        <option value=3>3+</option>
+        <option value=4>4+</option>
     </select>
 
-    <select name="Showers">
-        <option value="Showers" disabled selected>Showers</option>
-        <option value="One-Or-More">1+</option>
-        <option value="Two-Or-More">2+</option>
-        <option value="Three-Or-More">3+</option>
-        <option value="Four-Or-More">4+</option>
+    <select bind:value={$FiltersStore["min_showers"]} name="Showers">
+        <option value="" disabled selected>Showers</option>
+        <option value=1>1+</option>
+        <option value=2>2+</option>
+        <option value=3>3+</option>
+        <option value=4>4+</option>
     </select>
     
-    <select name="Noise-Level">
-        <option value="Noise-Level" disabled selected>Noise Level</option>
-        <option value="Quiet">Quiet (1-3)</option>
-        <option value="Moderate">Moderate (3-6)</option>
-        <option value="Loud">Loud (6-10)</option>
+    <select bind:value={$FiltersStore["noise_level"]} name="Noise-Level">
+        <option value="" disabled selected>Noise Level</option>
+        <option value="1">Quiet (1-3)</option>
+        <option value="4">Moderate (3-6)</option>
+        <option value="6">Loud (6-10)</option>
     </select>
 </div>
 
