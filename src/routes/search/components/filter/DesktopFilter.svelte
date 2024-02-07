@@ -1,13 +1,15 @@
 <script>
 import FilterButtons from './FilterButtons.svelte';
 import FilterOptions from "./FilterOptions.svelte";
+
+export let filterSearch;
 </script>
 
 <div id="Filters">
     <FilterOptions />
 
     <div style="display: flex;">
-        <FilterButtons />
+        <FilterButtons {filterSearch} />
     </div>
 </div>
 
