@@ -1,6 +1,30 @@
+<script>
+    import FiltersStore from "$lib/stores/SearchFilters"
+    
+    export let filterSearch;
+
+    function clearFilters() {
+        const name = $FiltersStore["name"];
+
+        FiltersStore.set({        
+            "sort_by": "",
+            "property_type": "",
+            "min_bedrooms": "",
+            "min_showers": "",
+            "noise_level": "",
+            "name": name
+        });
+
+        filterSearch();
+    }
+</script>
+
 <div>
-    <button>Apply Filters</button>
-    <button id="Clear">Clear Filters</button>
+    <button on:click={filterSearch}>Apply Filters</button>
+    <button id="Clear" on:click={() => {
+        clearFilters();
+        filterSearch();
+    }}>Clear Filters</button>
 </div>
 
 <style>
