@@ -56,6 +56,8 @@
         font-weight: normal;
         background-color: transparent;
         font-size: 19px;
+
+        color: var(--dark_brown);
     }
 
     @media only screen and (max-width: 450px) {
