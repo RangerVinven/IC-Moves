@@ -1,14 +1,13 @@
 <script>
+    import FiltersStore from "$lib/stores/SearchFilters";
     export let searchProperties;
-    let searchText;
 </script>
 
 <div id="Search-And-Button">
-    <input bind:value={searchText} id="Search" placeholder="Enter a specific property" type="text">
-    <button class="Search-Btn" on:click={() => searchProperties(searchText)}>Search</button>
+    <input bind:value={$FiltersStore.name} id="Search" placeholder="Enter a specific property" type="text">
+    <button class="Search-Btn" on:click={() => searchProperties($FiltersStore.name)}>Search</button>
     <button class="Clear-Btn" on:click={() => {
-        searchText = "";
-        searchProperties("");
+        $FiltersStore.name = "";
     }}>Clear Search</button>
 </div>
 
