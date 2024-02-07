@@ -25,7 +25,7 @@
         <div class="Icon">
             <FaBell />
         </div>
-        <h6>{data["noise_level"]}</h6>
+        <h6>{data["noise_level"]}/10</h6>
     </div>
 </div>
 

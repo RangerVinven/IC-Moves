@@ -27,7 +27,7 @@ export let property;
         <div class="Icon Bell">
             <FaBell />
         </div>
-        <h6>{property["noise_level"]}</h6>
+        <h6>{property["noise_level"]}/10</h6>
     </div>
 
     <div>
