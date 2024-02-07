@@ -5,9 +5,10 @@
 
 <div id="Search-And-Button">
     <input bind:value={$FiltersStore.name} id="Search" placeholder="Enter a specific property" type="text">
-    <button class="Search-Btn" on:click={() => searchProperties($FiltersStore.name)}>Search</button>
+    <button class="Search-Btn" on:click={searchProperties}>Search</button>
     <button class="Clear-Btn" on:click={() => {
         $FiltersStore.name = "";
+        searchProperties();
     }}>Clear Search</button>
 </div>
 
