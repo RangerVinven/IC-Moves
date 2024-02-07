@@ -2,43 +2,28 @@
 import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 import MobileFilter from "./filter/MobileFilter.svelte";
 import SearchBar from "./SearchBar.svelte";
-    
-import { Circle } from "svelte-loading-spinners";
-import { onMount } from "svelte"
 
-$: properties = [];
-let propertiesEmpty = false;
+import { Circle } from "svelte-loading-spinners";
+import { onMount } from "svelte";
+
+import properties from "$lib/stores/PropertiesStore";
+import properties_empty from "$lib/stores/PropertiesEmptyStore";
+
 let propertiesBackup;
+export let filterSearch;
 
 onMount(async () => {
     const response = await fetch("http://localhost:8000/properties/");
     const data = await response.json();
 
-    properties = data;
-    propertiesBackup = properties;
+    properties.set(data);
+    propertiesBackup = $properties;
 })
 
-// Searches the properties for ones iwth specific characters
-function searchProperties(searchText) {
-    if(searchText === "") {
-        properties = propertiesBackup;
-        propertiesEmpty = false;
-    } else {
-        const newProperties = propertiesBackup.filter(property => property["name"].toLowerCase().includes(searchText.toLowerCase()));
-        properties = newProperties;
-
-        // If there's no properties that match that search
-        if(properties.length === 0) {
-            propertiesEmpty = true;
-        } else {
-            propertiesEmpty = false;
-        }
-    }
-}
 </script>
 
 <div id="Container">
-    <SearchBar {searchProperties} />
+    <SearchBar searchProperties={filterSearch} />
 
     <div id="Mobile-Filter">
         <MobileFilter />
@@ -47,16 +32,16 @@ function searchProperties(searchText) {
     <div id="Properties">
 
         <!-- Displays a spinner icon while awaiting the API response -->
-        {#if properties.length === 0 && propertiesEmpty === false}
+        {#if $properties.length === 0 && $properties_empty === false}
             <div id="Loading-Icon">
                 <Circle color="var(--dark_brown)" size=80 />
             </div>
 
-        {:else if propertiesEmpty}
+        {:else if $properties_empty}
             <h3>No properties matches that search</h3>
         {:else}
 
-            {#each properties as property}
+            {#each $properties as property}
                 <PropertyPreview {property} />
             {/each}
 
