@@ -53,6 +53,7 @@
 
     #Delete-Confirmation-Container {
         display: flex;
+        justify-content: center;
     }
 
     #Delete-Confirmation-Btn {
