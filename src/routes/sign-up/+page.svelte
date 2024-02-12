@@ -42,6 +42,11 @@
         } else if (res.status === 409) {
             hasError = true;
             errorMessage = "An account with that email already exists"
+        
+        // If the email isn't valid
+        } else if (res.status === 400) {
+            hasError = true;
+            errorMessage = "Invalid email"
         } else {
             hasError = true;
             errorMessage = "Something went wrong"
