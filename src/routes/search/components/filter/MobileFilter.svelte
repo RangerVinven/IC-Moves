@@ -7,6 +7,7 @@
     import FilterButtons from './FilterButtons.svelte';
 
     $: isFilterDisplayed = false;
+    export let filterSearch;
 </script>
 
 <div>
@@ -28,7 +29,7 @@
             <FilterOptions />
 
             <div style="display:flex;justify-content:center;">
-                <FilterButtons />
+                <FilterButtons {filterSearch} />
             </div>
         {/if}
     </div>
