@@ -1,11 +1,11 @@
 export async function load({ params }) {
     
     // Gets the data about the specific property
-    const response = await fetch("http://127.0.0.1:8000/properties/" + params.id);
+    const response = await fetch("http://api:8000/properties/" + params.id);
     const data = await response.json();
 
     // Gets the images's alt descriptions
-    const imagesRes = await fetch("http://127.0.0.1:8000/images/" + params.id);
+    const imagesRes = await fetch("http://api:8000/images/" + params.id);
     const images = await imagesRes.json();
 
     data["images"] = images;
