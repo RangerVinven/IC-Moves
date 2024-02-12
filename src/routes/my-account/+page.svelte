@@ -59,10 +59,10 @@
         <Properties />
     </div>
 
-    <div id="Alert" class={alertStatus}>
-        { alertMessage }
-    </div>
+</div>
 
+<div id="Alert" class={alertStatus}>
+    { alertMessage }
 </div>
 
 <style>
