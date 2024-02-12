@@ -12,6 +12,18 @@
 
     let email = "";
 
+    let alertStatus = "Hidden";
+    let alertMessage = "Email changed successfully";
+
+    function showAlert(message, status) {
+        alertMessage = message;
+        alertStatus = status;
+
+        setTimeout(() => {
+            alertStatus = "Hidden"
+        }, 4000);
+    }
+
     onMount(async () => {
         if(browser) {
             const res = await fetch("http://127.0.0.1:8000/users", {
@@ -33,8 +45,8 @@
     <div id="Your-Account">
         <h1>Your Account</h1>
     
-        <YourEmailOption {email} />
-        <YourPasswordOption />
+        <YourEmailOption {email} {showAlert} />
+        <YourPasswordOption {showAlert} />
 
         <div id="Delete-Account-Container">
             <DeleteAccount />
@@ -47,9 +59,40 @@
         <Properties />
     </div>
 
+    <div id="Alert" class={alertStatus}>
+        { alertMessage }
+    </div>
+
 </div>
 
 <style>
+
+    #Alert {
+        position: absolute;
+        padding: 10px;
+
+        font-weight: bold;
+        font-size: 20px;
+
+        text-align: center;
+        color: white;
+
+        left: 30px;
+        bottom: 30px;
+
+    }
+
+    .Success {
+        background-color: #4BB543;
+    }
+
+    .Error {
+        background-color: rgba(255, 0, 0, 0.9);
+    }
+
+    .Hidden {
+        display: none;
+    }
 
     #Container {
         height: 100dvh;
@@ -91,6 +134,13 @@
     @media only screen and (max-width: 600px) {
         #Your-Account {
             width: 70%;
+        }
+
+        #Alert {
+            left: 50%;
+            bottom: 30px;
+
+            transform: translate(-50%);
         }
 
     }
