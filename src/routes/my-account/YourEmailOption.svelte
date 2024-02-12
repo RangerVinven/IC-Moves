@@ -34,6 +34,8 @@
         if(res.status === 200) {
             showAlert("Email changed successfully", "Success");
             return true; // Means it worked
+        } else if (res.status === 400) {
+            showAlert("Email not valid, email not changed", "Error");
         } else {
             showAlert("Something went wrong, email not changed", "Error");
         }
