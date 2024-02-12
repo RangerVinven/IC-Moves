@@ -1,4 +1,6 @@
 <script>
+import axios from "axios"
+
 import PropertyPreview from "$lib/components/PropertyPreview.svelte";
 import MobileFilter from "./filter/MobileFilter.svelte";
 import SearchBar from "./SearchBar.svelte";
@@ -13,8 +15,9 @@ let propertiesBackup;
 export let filterSearch;
 
 onMount(async () => {
-    const response = await fetch("http://localhost:8000/properties/");
-    const data = await response.json();
+
+    const response = await axios.get("http://127.0.0.1:8000/properties/");
+    const data = response.data;
 
     properties.set(data);
     propertiesBackup = $properties;
@@ -26,7 +29,7 @@ onMount(async () => {
     <SearchBar searchProperties={filterSearch} />
 
     <div id="Mobile-Filter">
-        <MobileFilter />
+        <MobileFilter {filterSearch} />
     </div>
     
     <div id="Properties">
