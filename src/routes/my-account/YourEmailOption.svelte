@@ -2,6 +2,7 @@
     let isDisabled = true;
     let buttonText = "Change"
     export let email;
+    export let showAlert;
 
     // Changes the button text and saves the email
     function buttonPressed() {
@@ -31,10 +32,10 @@
         })
 
         if(res.status === 200) {
-            console.log("Email saved!");
+            showAlert("Email changed successfully", "Success");
             return true; // Means it worked
         } else {
-            console.log("Error - " + res.status);
+            showAlert("Something went wrong, email not changed", "Error");
         }
 
     }

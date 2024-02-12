@@ -1,4 +1,6 @@
 <script>
+    export let showAlert;
+
     let password;
     let verifyPassword
     
@@ -17,10 +19,10 @@
         })
 
         if(res.status === 200) {
-            console.log("Password changed");
+            showAlert("Password Changed!", "Success");
             return true; // Means it worked
         } else {
-            console.log("Error - " + res.status);
+            showAlert("Something Went Wrong. Try again later.", "Error");
         }
 
     }
