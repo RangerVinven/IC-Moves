@@ -36,6 +36,8 @@
             return true; // Means it worked
         } else if (res.status === 400) {
             showAlert("Email not valid, email not changed", "Error");
+        } else if (res.status === 409) {
+            showAlert("An account with that email already exists, email not changed", "Error");
         } else {
             showAlert("Something went wrong, email not changed", "Error");
         }
