@@ -13,7 +13,7 @@
     let email = "";
 
     let alertStatus = "Hidden";
-    let alertMessage = "Email changed successfully";
+    let alertMessage = "";
 
     function showAlert(message, status) {
         alertMessage = message;
@@ -102,7 +102,7 @@
     }
 
     .Hidden {
-        display: none;
+        visibility: hidden;
     }
 
     #Container {
